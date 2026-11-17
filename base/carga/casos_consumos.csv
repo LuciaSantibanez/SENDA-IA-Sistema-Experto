@@ -1,0 +1,34 @@
+paciente,consumo,alimento,frecuencia_semanal,relato,comidas
+P01,P01-CS01,bebida_almendras_desc,7,Tomo un vaso de bebida de almendras por día; no sé si está fortificada,DESAYUNO:7:SI
+P01,P01-CS02,lentejas,1,Como lentejas una vez por semana,ALMUERZO:1:SI
+P01,P01-CS03,mate,14,Tomo mate con el almuerzo y la cena,ALMUERZO:7:SI;CENA:7:SI
+P02,P02-CS01,carne_vacuna,3,Carne tres veces por semana,ALMUERZO:3:SI
+P02,P02-CS02,leche_vaca,7,Leche en el desayuno,DESAYUNO:7:SI
+P03,P03-CS01,carne_vacuna,5,Carne cinco veces por semana,ALMUERZO:3:SI;CENA:2:SI
+P03,P03-CS02,pollo,2,Pollo dos veces,CENA:2:SI
+P03,P03-CS03,leche_fortificada_d,7,Leche fortificada en el desayuno,DESAYUNO:7:SI
+P03,P03-CS04,yogur,7,Yogur en la merienda,MERIENDA:7:SI
+P03,P03-CS05,huevo,3,Huevo tres veces,CENA:3:SI
+P03,P03-CS06,queso,2,Queso dos veces,MERIENDA:2:SI
+P04,P04-CS01,lentejas,4,Lentejas cuatro veces,ALMUERZO:4:SI
+P04,P04-CS02,garbanzos,3,Garbanzos tres veces,CENA:3:SI
+P04,P04-CS03,naranja,7,Naranja con el almuerzo,ALMUERZO:7:SI
+P04,P04-CS04,bebida_soja_fort,7,Bebida de soja fortificada,DESAYUNO:7:SI
+P04,P04-CS05,espinaca,2,Espinaca dos veces,CENA:2:SI
+P05,P05-CS01,carne_vacuna,5,Carne cinco veces,ALMUERZO:5:SI
+P05,P05-CS02,pollo,2,Pollo dos veces,CENA:2:SI
+P05,P05-CS03,leche_fortificada_d,14,Dos vasos de leche fortificada por día,DESAYUNO:7:SI;MERIENDA:7:SI
+P06,P06-CS01,leche_vaca,7,Leche en el desayuno,DESAYUNO:7:SI
+P07,P07-CS01,lentejas,3,Lentejas tres veces,ALMUERZO:3:SI
+P07,P07-CS02,huevo,3,Huevos tres veces,DESAYUNO:3:SI
+P08,P08-CS01,carne_vacuna,7,Ese día comí carne,ALMUERZO:7:SI
+P08,P08-CS02,leche_vaca,7,Leche en el desayuno,DESAYUNO:7:SI
+P09,P09-CS01,leche_vaca,7,Leche en el desayuno,DESAYUNO:7:SI
+P09,P09-CS02,huevo,7,Un huevo por día,CENA:7:SI
+P09,P09-CS03,queso,3.5,Queso día por medio,MERIENDA:3.5:SI
+P09,P09-CS04,lentejas,3,Lentejas tres veces,ALMUERZO:3:SI
+P09,P09-CS05,te,7,Té con el desayuno,DESAYUNO:7:SI
+P09,P09-CS06,cafe,6,Café a media mañana y a veces después de almorzar,ALMUERZO:1:SI;MEDIA_MANANA:5:NO
+P10,P10-CS01,carne_vacuna,4,Carne cuatro veces,ALMUERZO:4:SI
+P10,P10-CS02,leche_vaca,7,Leche en el desayuno,DESAYUNO:7:SI
+P10,P10-CS03,yogur,3,Yogur tres veces,MERIENDA:3:SI

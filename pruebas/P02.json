@@ -1,0 +1,602 @@
+{
+  "pregunta": "Revisión integral de P02",
+  "modelo": "qwen2.5:1.5b",
+  "ruta_llm": {
+    "paciente": "P02",
+    "modulos": [
+      "CA",
+      "FE",
+      "B12",
+      "VD"
+    ]
+  },
+  "ruta_verificada": true,
+  "paciente": "P02",
+  "modulos": {
+    "CA": {
+      "resumen": {
+        "accion_admisibilidad": "DERIVAR",
+        "estado_concluido": "FUERA_DE_ALCANCE",
+        "estado": "FUERA_DE_ALCANCE",
+        "resultado_provisional": null,
+        "ingesta_alcance": null,
+        "situacion_interna": "CONCLUIDA",
+        "traza_admisibilidad": [
+          {
+            "texto": "Condición del catálogo de derivación presente: Sospecha de celiaquía sin diagnóstico o sin tratamiento. Se interrumpe la vía dietaria y se deriva al médico",
+            "regla": "ADM-02",
+            "efecto": "VEREDICTO"
+          }
+        ],
+        "etiqueta_prioridad": null,
+        "ingesta_relativa": null,
+        "unidad": null,
+        "ingesta_estimada": null,
+        "paciente": "P02",
+        "prioridad_revision_ca": null,
+        "capa_difusa_estado": "NO_APLICA_DERIVACION",
+        "fundamento": null,
+        "advertencias": [],
+        "datos_faltantes": [],
+        "admisibilidad": "DERIVAR",
+        "traza": [
+          {
+            "texto": "Se replica el veredicto de admisibilidad (DERIVAR)",
+            "estado_propuesto": "FUERA_DE_ALCANCE",
+            "regla": "META-05",
+            "efecto": "ESTADO"
+          }
+        ],
+        "nutriente": "CA",
+        "referencia": null
+      },
+      "traza": [
+        {
+          "evaluacion": "P02-ADM",
+          "orden": 20,
+          "regla": "ADM-02",
+          "razonamiento": "Condición del catálogo de derivación presente: Sospecha de celiaquía sin diagnóstico o sin tratamiento. Se interrumpe la vía dietaria y se deriva al médico",
+          "efecto": "VEREDICTO",
+          "estado_propuesto": null,
+          "evidencias": [
+            {
+              "valor": null,
+              "relato": null,
+              "atributo": null,
+              "id": null,
+              "nombre": "Sospecha de celiaquía sin diagnóstico o sin tratamiento"
+            }
+          ],
+          "fuentes": [
+            "CUESTIONARIO"
+          ],
+          "preguntas_experta": [
+            "Q4"
+          ]
+        },
+        {
+          "evaluacion": "P02-CA",
+          "orden": 15,
+          "regla": "META-05",
+          "razonamiento": "Se replica el veredicto de admisibilidad (DERIVAR)",
+          "efecto": "ESTADO",
+          "estado_propuesto": "FUERA_DE_ALCANCE",
+          "evidencias": [
+            {
+              "valor": null,
+              "relato": null,
+              "atributo": null,
+              "id": "P02-ADM",
+              "nombre": null
+            }
+          ],
+          "fuentes": [],
+          "preguntas_experta": []
+        }
+      ],
+      "difuso": {
+        "indice": null,
+        "etiqueta": null,
+        "prioridad_ca": null,
+        "activaciones": []
+      },
+      "admision_PI4": {
+        "accion": "DERIVAR",
+        "motivo": "Sospecha de celiaquía sin diagnóstico o sin tratamiento",
+        "veredicto": "DERIVAR",
+        "tope_aplicado": null,
+        "indice_calidad": null,
+        "dias_registro": 3.0,
+        "nombre_caso": "Celiaquía no controlada (caso integrado 2)",
+        "incluye_habil": true,
+        "trazas": [
+          {
+            "texto": "Condición del catálogo de derivación presente: Sospecha de celiaquía sin diagnóstico o sin tratamiento. Se interrumpe la vía dietaria y se deriva al médico",
+            "valor": "DERIVAR",
+            "orden": 20,
+            "efecto": "VEREDICTO",
+            "regla": "ADM-02"
+          }
+        ],
+        "incluye_finde": false,
+        "paciente": "P02",
+        "etiqueta_difusa": null,
+        "datos_faltantes": [],
+        "comidas_principales": 3.0,
+        "calidad_registro": null
+      }
+    },
+    "FE": {
+      "resumen": {
+        "accion_admisibilidad": "DERIVAR",
+        "estado_concluido": "FUERA_DE_ALCANCE",
+        "estado": "FUERA_DE_ALCANCE",
+        "resultado_provisional": null,
+        "ingesta_alcance": null,
+        "situacion_interna": "CONCLUIDA",
+        "traza_admisibilidad": [
+          {
+            "texto": "Condición del catálogo de derivación presente: Sospecha de celiaquía sin diagnóstico o sin tratamiento. Se interrumpe la vía dietaria y se deriva al médico",
+            "regla": "ADM-02",
+            "efecto": "VEREDICTO"
+          }
+        ],
+        "etiqueta_prioridad": null,
+        "ingesta_relativa": null,
+        "unidad": null,
+        "ingesta_estimada": null,
+        "paciente": "P02",
+        "prioridad_revision_ca": null,
+        "capa_difusa_estado": "NO_APLICA_DERIVACION",
+        "fundamento": null,
+        "advertencias": [],
+        "datos_faltantes": [],
+        "admisibilidad": "DERIVAR",
+        "traza": [
+          {
+            "texto": "Se replica el veredicto de admisibilidad (DERIVAR)",
+            "estado_propuesto": "FUERA_DE_ALCANCE",
+            "regla": "META-05",
+            "efecto": "ESTADO"
+          }
+        ],
+        "nutriente": "FE",
+        "referencia": null
+      },
+      "traza": [
+        {
+          "evaluacion": "P02-ADM",
+          "orden": 20,
+          "regla": "ADM-02",
+          "razonamiento": "Condición del catálogo de derivación presente: Sospecha de celiaquía sin diagnóstico o sin tratamiento. Se interrumpe la vía dietaria y se deriva al médico",
+          "efecto": "VEREDICTO",
+          "estado_propuesto": null,
+          "evidencias": [
+            {
+              "valor": null,
+              "relato": null,
+              "atributo": null,
+              "id": null,
+              "nombre": "Sospecha de celiaquía sin diagnóstico o sin tratamiento"
+            }
+          ],
+          "fuentes": [
+            "CUESTIONARIO"
+          ],
+          "preguntas_experta": [
+            "Q4"
+          ]
+        },
+        {
+          "evaluacion": "P02-FE",
+          "orden": 15,
+          "regla": "META-05",
+          "razonamiento": "Se replica el veredicto de admisibilidad (DERIVAR)",
+          "efecto": "ESTADO",
+          "estado_propuesto": "FUERA_DE_ALCANCE",
+          "evidencias": [
+            {
+              "valor": null,
+              "relato": null,
+              "atributo": null,
+              "id": "P02-ADM",
+              "nombre": null
+            }
+          ],
+          "fuentes": [],
+          "preguntas_experta": []
+        }
+      ],
+      "difuso": {
+        "indice": null,
+        "etiqueta": null,
+        "prioridad_ca": null,
+        "activaciones": []
+      },
+      "contexto_PI4": {
+        "estado": "FUERA_DE_ALCANCE",
+        "resultado_provisional": null,
+        "etiqueta_riesgo": null,
+        "fuente_verificada": "NO",
+        "riesgo_difuso": null,
+        "motivo_fuera_alcance": "DERIVACION",
+        "situacion_interna": "CONCLUIDA",
+        "evaluacion": "P02-FE",
+        "tipo_fuente_verificada": null,
+        "trazas": [
+          {
+            "grado": null,
+            "razonamiento": "Se replica el veredicto de admisibilidad (DERIVAR)",
+            "estado_propuesto": "FUERA_DE_ALCANCE",
+            "orden": 15,
+            "efecto": "ESTADO",
+            "regla": "META-05"
+          }
+        ],
+        "paciente": "P02",
+        "condiciones": [
+          "Sospecha de celiaquía sin diagnóstico o sin tratamiento"
+        ],
+        "fundamento": null,
+        "advertencias": [],
+        "datos_faltantes": [],
+        "regla_estado": "META-01",
+        "nutriente": "Hierro"
+      },
+      "admision_PI4": {
+        "accion": "DERIVAR",
+        "motivo": "Sospecha de celiaquía sin diagnóstico o sin tratamiento",
+        "veredicto": "DERIVAR",
+        "tope_aplicado": null,
+        "indice_calidad": null,
+        "dias_registro": 3.0,
+        "nombre_caso": "Celiaquía no controlada (caso integrado 2)",
+        "incluye_habil": true,
+        "trazas": [
+          {
+            "texto": "Condición del catálogo de derivación presente: Sospecha de celiaquía sin diagnóstico o sin tratamiento. Se interrumpe la vía dietaria y se deriva al médico",
+            "valor": "DERIVAR",
+            "orden": 20,
+            "efecto": "VEREDICTO",
+            "regla": "ADM-02"
+          }
+        ],
+        "incluye_finde": false,
+        "paciente": "P02",
+        "etiqueta_difusa": null,
+        "datos_faltantes": [],
+        "comidas_principales": 3.0,
+        "calidad_registro": null
+      }
+    },
+    "B12": {
+      "resumen": {
+        "accion_admisibilidad": "DERIVAR",
+        "estado_concluido": "FUERA_DE_ALCANCE",
+        "estado": "FUERA_DE_ALCANCE",
+        "resultado_provisional": null,
+        "ingesta_alcance": null,
+        "situacion_interna": "CONCLUIDA",
+        "traza_admisibilidad": [
+          {
+            "texto": "Condición del catálogo de derivación presente: Sospecha de celiaquía sin diagnóstico o sin tratamiento. Se interrumpe la vía dietaria y se deriva al médico",
+            "regla": "ADM-02",
+            "efecto": "VEREDICTO"
+          }
+        ],
+        "etiqueta_prioridad": null,
+        "ingesta_relativa": null,
+        "unidad": null,
+        "ingesta_estimada": null,
+        "paciente": "P02",
+        "prioridad_revision_ca": null,
+        "capa_difusa_estado": "NO_APLICA_DERIVACION",
+        "fundamento": null,
+        "advertencias": [],
+        "datos_faltantes": [],
+        "admisibilidad": "DERIVAR",
+        "traza": [
+          {
+            "texto": "Se replica el veredicto de admisibilidad (DERIVAR)",
+            "estado_propuesto": "FUERA_DE_ALCANCE",
+            "regla": "META-05",
+            "efecto": "ESTADO"
+          }
+        ],
+        "nutriente": "B12",
+        "referencia": null
+      },
+      "traza": [
+        {
+          "evaluacion": "P02-ADM",
+          "orden": 20,
+          "regla": "ADM-02",
+          "razonamiento": "Condición del catálogo de derivación presente: Sospecha de celiaquía sin diagnóstico o sin tratamiento. Se interrumpe la vía dietaria y se deriva al médico",
+          "efecto": "VEREDICTO",
+          "estado_propuesto": null,
+          "evidencias": [
+            {
+              "valor": null,
+              "relato": null,
+              "atributo": null,
+              "id": null,
+              "nombre": "Sospecha de celiaquía sin diagnóstico o sin tratamiento"
+            }
+          ],
+          "fuentes": [
+            "CUESTIONARIO"
+          ],
+          "preguntas_experta": [
+            "Q4"
+          ]
+        },
+        {
+          "evaluacion": "P02-B12",
+          "orden": 15,
+          "regla": "META-05",
+          "razonamiento": "Se replica el veredicto de admisibilidad (DERIVAR)",
+          "efecto": "ESTADO",
+          "estado_propuesto": "FUERA_DE_ALCANCE",
+          "evidencias": [
+            {
+              "valor": null,
+              "relato": null,
+              "atributo": null,
+              "id": "P02-ADM",
+              "nombre": null
+            }
+          ],
+          "fuentes": [],
+          "preguntas_experta": []
+        }
+      ],
+      "difuso": {
+        "indice": null,
+        "etiqueta": null,
+        "prioridad_ca": null,
+        "activaciones": []
+      },
+      "contexto_PI4": {
+        "estado": "FUERA_DE_ALCANCE",
+        "criterios_no_validados_usados": [],
+        "patron": "OMNIVORO",
+        "resultado_provisional": null,
+        "condiciones_derivacion": [
+          "Sospecha de celiaquía sin diagnóstico o sin tratamiento"
+        ],
+        "etiqueta_riesgo": null,
+        "riesgo_difuso": null,
+        "adherencia_suplemento": null,
+        "motivo_fuera_alcance": "DERIVACION",
+        "situacion_interna": "CONCLUIDA",
+        "valor_referencia": null,
+        "edad": 45,
+        "ingesta_relativa": null,
+        "componente_limitante": null,
+        "unidad": "µg/día",
+        "aporte_suplementos": null,
+        "ingesta_estimada": null,
+        "paciente": "P02",
+        "advertencias": [],
+        "regla_estado": "META-01",
+        "datos_faltantes": [],
+        "traza": [
+          {
+            "texto": "Se replica el veredicto de admisibilidad (DERIVAR)",
+            "respaldo": null,
+            "evidencia": [
+              "P02-ADM"
+            ],
+            "estado_propuesto": "FUERA_DE_ALCANCE",
+            "efecto": "ESTADO",
+            "regla": "META-05"
+          }
+        ],
+        "nutriente": "Vitamina B12",
+        "se_deriva_a": []
+      },
+      "admision_PI4": {
+        "accion": "DERIVAR",
+        "motivo": "Sospecha de celiaquía sin diagnóstico o sin tratamiento",
+        "veredicto": "DERIVAR",
+        "tope_aplicado": null,
+        "indice_calidad": null,
+        "dias_registro": 3.0,
+        "nombre_caso": "Celiaquía no controlada (caso integrado 2)",
+        "incluye_habil": true,
+        "trazas": [
+          {
+            "texto": "Condición del catálogo de derivación presente: Sospecha de celiaquía sin diagnóstico o sin tratamiento. Se interrumpe la vía dietaria y se deriva al médico",
+            "valor": "DERIVAR",
+            "orden": 20,
+            "efecto": "VEREDICTO",
+            "regla": "ADM-02"
+          }
+        ],
+        "incluye_finde": false,
+        "paciente": "P02",
+        "etiqueta_difusa": null,
+        "datos_faltantes": [],
+        "comidas_principales": 3.0,
+        "calidad_registro": null
+      }
+    },
+    "VD": {
+      "resumen": {
+        "accion_admisibilidad": "DERIVAR",
+        "estado_concluido": "FUERA_DE_ALCANCE",
+        "estado": "FUERA_DE_ALCANCE",
+        "resultado_provisional": null,
+        "ingesta_alcance": null,
+        "situacion_interna": "CONCLUIDA",
+        "traza_admisibilidad": [
+          {
+            "texto": "Condición del catálogo de derivación presente: Sospecha de celiaquía sin diagnóstico o sin tratamiento. Se interrumpe la vía dietaria y se deriva al médico",
+            "regla": "ADM-02",
+            "efecto": "VEREDICTO"
+          }
+        ],
+        "etiqueta_prioridad": null,
+        "ingesta_relativa": null,
+        "unidad": null,
+        "ingesta_estimada": null,
+        "paciente": "P02",
+        "prioridad_revision_ca": null,
+        "capa_difusa_estado": "NO_APLICA_DERIVACION",
+        "fundamento": null,
+        "advertencias": [],
+        "datos_faltantes": [],
+        "admisibilidad": "DERIVAR",
+        "traza": [
+          {
+            "texto": "Se replica el veredicto de admisibilidad (DERIVAR)",
+            "estado_propuesto": "FUERA_DE_ALCANCE",
+            "regla": "META-05",
+            "efecto": "ESTADO"
+          }
+        ],
+        "nutriente": "VD",
+        "referencia": null
+      },
+      "traza": [
+        {
+          "evaluacion": "P02-ADM",
+          "orden": 20,
+          "regla": "ADM-02",
+          "razonamiento": "Condición del catálogo de derivación presente: Sospecha de celiaquía sin diagnóstico o sin tratamiento. Se interrumpe la vía dietaria y se deriva al médico",
+          "efecto": "VEREDICTO",
+          "estado_propuesto": null,
+          "evidencias": [
+            {
+              "valor": null,
+              "relato": null,
+              "atributo": null,
+              "id": null,
+              "nombre": "Sospecha de celiaquía sin diagnóstico o sin tratamiento"
+            }
+          ],
+          "fuentes": [
+            "CUESTIONARIO"
+          ],
+          "preguntas_experta": [
+            "Q4"
+          ]
+        },
+        {
+          "evaluacion": "P02-VD",
+          "orden": 15,
+          "regla": "META-05",
+          "razonamiento": "Se replica el veredicto de admisibilidad (DERIVAR)",
+          "efecto": "ESTADO",
+          "estado_propuesto": "FUERA_DE_ALCANCE",
+          "evidencias": [
+            {
+              "valor": null,
+              "relato": null,
+              "atributo": null,
+              "id": "P02-ADM",
+              "nombre": null
+            }
+          ],
+          "fuentes": [],
+          "preguntas_experta": []
+        }
+      ],
+      "difuso": {
+        "indice": null,
+        "etiqueta": null,
+        "prioridad_ca": null,
+        "activaciones": []
+      },
+      "contexto_PI4": {
+        "estado": "FUERA_DE_ALCANCE",
+        "condiciones_derivacion": [
+          "Sospecha de celiaquía sin diagnóstico o sin tratamiento"
+        ],
+        "fuente_verificada": "NO",
+        "riesgo_difuso": null,
+        "tipo_fuente_verificada": null,
+        "componente_limitante": null,
+        "exposicion": {
+          "mes_consulta": 3,
+          "indice_E": null,
+          "estado": null,
+          "horario": null,
+          "horas_semana": null,
+          "fototipo": null,
+          "indice_uv_mes": null,
+          "protector": null,
+          "vestimenta": null
+        },
+        "paciente": "P02",
+        "etiqueta_exposicion": null,
+        "aporte_oral": {
+          "unidad": "µg/día",
+          "ingesta_dietaria": null,
+          "aporte_suplementos": null,
+          "ingesta_estimada": null,
+          "aporte_relativo": null,
+          "valor_referencia": null
+        },
+        "traza": [
+          {
+            "texto": "Se replica el veredicto de admisibilidad (DERIVAR)",
+            "evidencia": [
+              "P02-ADM"
+            ],
+            "respaldo_experta": null,
+            "estado_propuesto": "FUERA_DE_ALCANCE",
+            "efecto": "ESTADO",
+            "regla": "META-05"
+          }
+        ],
+        "patron": "OMNIVORO",
+        "resultado_provisional": null,
+        "criterios_no_validados_usados": [],
+        "pertenencias": [],
+        "etiqueta_riesgo": null,
+        "situacion_interna": "CONCLUIDA",
+        "edad": 45,
+        "etiqueta_aporte": null,
+        "riesgo_invierno": null,
+        "advertencias": [],
+        "regla_estado": "META-01",
+        "datos_faltantes": [],
+        "nutriente": "Vitamina D",
+        "etiqueta_invierno": null,
+        "se_deriva_a": []
+      },
+      "admision_PI4": {
+        "accion": "DERIVAR",
+        "motivo": "Sospecha de celiaquía sin diagnóstico o sin tratamiento",
+        "veredicto": "DERIVAR",
+        "tope_aplicado": null,
+        "indice_calidad": null,
+        "dias_registro": 3.0,
+        "nombre_caso": "Celiaquía no controlada (caso integrado 2)",
+        "incluye_habil": true,
+        "trazas": [
+          {
+            "texto": "Condición del catálogo de derivación presente: Sospecha de celiaquía sin diagnóstico o sin tratamiento. Se interrumpe la vía dietaria y se deriva al médico",
+            "valor": "DERIVAR",
+            "orden": 20,
+            "efecto": "VEREDICTO",
+            "regla": "ADM-02"
+          }
+        ],
+        "incluye_finde": false,
+        "paciente": "P02",
+        "etiqueta_difusa": null,
+        "datos_faltantes": [],
+        "comidas_principales": 3.0,
+        "calidad_registro": null
+      }
+    }
+  },
+  "fundamentos_seleccionados": [
+    "CA · META-05 · Se replica el veredicto de admisibilidad (DERIVAR)",
+    "FE · META-05 · Se replica el veredicto de admisibilidad (DERIVAR)",
+    "B12 · META-05 · Se replica el veredicto de admisibilidad (DERIVAR)"
+  ],
+  "respuesta": "P02 · Admisibilidad: DERIVAR\nCA: fuera de alcance. \nFE: fuera de alcance. \nB12: fuera de alcance. \nVD: fuera de alcance. \nCA · META-05 · Se replica el veredicto de admisibilidad (DERIVAR)\nFE · META-05 · Se replica el veredicto de admisibilidad (DERIVAR)\nB12 · META-05 · Se replica el veredicto de admisibilidad (DERIVAR)"
+}

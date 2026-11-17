@@ -1,0 +1,6 @@
+id,submodulo,nutriente,autor,salida,uso_salida,estado_validacion
+MD-ADM,SM-ADM,,Zalazar,calidad_registro,Grado de confianza del registro que viaja con ADMISIBLE,CANDIDATO
+MD-CA,SM-CA,CA,Ramirez,prioridad_revision_ca,Indicador auxiliar de prioridad de revisión; no asigna estado,CANDIDATO
+MD-FE,SM-FE,FE,Santibañez,riesgo_insuficiencia,Riesgo de ingesta insuficiente de hierro,CANDIDATO
+MD-B12,SM-B12,B12,Nuñez,riesgo_insuficiencia,Riesgo de ingesta insuficiente de B12,CANDIDATO
+MD-VD,SM-VD,VD,Bataller,riesgo_insuficiencia,Riesgo de aporte insuficiente de vitamina D,CANDIDATO

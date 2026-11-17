@@ -1,0 +1,34 @@
+id,seccion,tema,sintesis,impacta
+Q1,Antes de evaluar,Días mínimos de registro,Mínimo 3 días representativos (ideal 3–7) que incluyan días laborales y fin de semana,PARAM_MIN_DIAS;MD-ADM;ADM-03
+Q2,Antes de evaluar,Comidas a registrar,Todas las comidas y bebidas (incluye colaciones; infusiones; fortificados y suplementos) con cantidades y marcas,MD-ADM;ADM-03
+Q3,Antes de evaluar,Registro corto,Con pocos días evalúa con más incertidumbre; 3 días variados son una primera aproximación; si son atípicos pide 7,MD-ADM;ADM-03
+Q4,Antes de evaluar,Condiciones de derivación,Sangrado digestivo; pérdida de peso involuntaria; desmayos o debilidad intensa; síntomas neurológicos; anemia conocida; sospecha de celiaquía sin diagnóstico o tratamiento; cirugía bariátrica; enfermedad malabsortiva,ADM-02;CATALOGO_DERIVACION
+Q5,Antes de evaluar,Condición de un solo nutriente,Evalúa los demás nutrientes; la condición aumenta la necesidad de evaluación médica,G-12
+Q6,Antes de evaluar,Derivar frente a no atender,No es lo mismo: al derivado se le explica el motivo y qué llevar; al que excede el alcance se le explica el límite,ADM-01;ADM-02;META-05
+Q7,Antes de evaluar,Vegano que registra huevos,Pregunta cómo define su alimentación; no reclasifica sin confirmar,ADM-04
+Q8,Cuándo alertar,Criterio de ingesta baja,Porcentaje de la referencia como señal de cribado (no diagnóstico); menos de 70–75 % se marca para revisar,G-07;PARAM_UMBRAL
+Q9,Cuándo alertar,Bandas de alerta,Menos de 70 % alerta; 70–90 % revisar contexto; más de 90 % no descarta si hay malabsorción o medicación; validar,MD-B12;MD-CA;MD-VD
+Q10,Cuándo alertar,Referencias,Prioriza referencias argentinas; NIH como apoyo,ValorReferencia
+Q11,Cuándo alertar,Dato esencial faltante,Informa «faltan datos»; si el resto sugiere riesgo agrega «posible ingesta baja; pendiente de confirmar»,META-01
+Q12,Calcio,Porciones de lácteos,Registra porciones diarias y tamaño; 2–3 por día pueden contribuir según cantidades,CA-01
+Q13,Calcio,Sin lácteos,Pregunta reemplazos; cantidades; fortificados y etiqueta,CA-01;CA-02
+Q14,Calcio,Bebida vegetal sin dato,Pide marca o foto de la etiqueta; no usa un valor genérico,G-04;CA-04
+Q15,Calcio,Calcio de verduras,La espinaca aporta calcio de baja biodisponibilidad; la acelga con cautela,APORTA.biodisponibilidad
+Q16,Hierro,Carne y legumbres,Carne 0–1 vez por semana puede ser señal para revisar; legumbres 3–7 veces por semana con vitamina C,FE-01;MD-FE
+Q17,Hierro,Mate y café,Separarlos 1–2 h de las comidas ricas en hierro,FE-02;PARAM_MARGEN_INHIBIDOR
+Q18,Hierro,Mate con cítrico,La vitamina C favorece pero no neutraliza el efecto del mate,FE-05;FE-07
+Q19,Hierro,Vegano con legumbres y cítricos,Merece revisar el hierro igual; no se concluye suficiencia por esa combinación,FE-09
+Q20,Hierro,Menstruación y donación,Se pregunta; no hay un plazo único,FE-08
+Q21,B12,Frecuencia de alimentos animales,Ninguna frecuencia semanal garantiza B12 sin conocer porciones,B12-20
+Q22,B12,Dosis de suplemento,No indica dosis sin evaluación profesional,Alcance
+Q23,B12,Edad y absorción,El riesgo aumenta con la edad; especialmente después de los 50,B12-12;PARAM_EDAD_ABSORCION
+Q24,Vitamina D,Horas de sol,No usa horas como garantía: depende de estación; hora; latitud; pigmentación; edad; ropa y protector,MD-VD
+Q25,Vitamina D,Horario en Mendoza,Depende de la estación y del índice UV; no recomienda horario ni sol sin protección,MD-VD;VD-FZ-06
+Q26,Vitamina D,Sol frente a dieta,Mucho tiempo al aire libre no garantiza vitamina D suficiente,VD-14;VD-FZ-02
+Q27,Vitamina D,Ropa larga y protector,Reducen la síntesis; no se infiere suficiencia por trabajar afuera,MD-VD
+Q28,Suplementos,Suplemento regular,Seguir la pauta de forma consistente; «cuando me acuerdo» no permite asumir cobertura,G-03;MD-B12
+Q29,Suplementos,Omeprazol y metformina,No hay un umbral exacto de meses; se revisa con el médico,G-11;PARAM_USO_PROLONGADO
+CASO_A,Casos rápidos,Vegana de 29 años en julio,Alerta posible de B12 y calcio; revisar hierro; pedir etiqueta de la bebida y registro de 3–7 días,P01
+CASO_B,Casos rápidos,Mujer de 55 con omeprazol y calcio + D,No se concluye sin dosis y regularidad; revisar B12 y hierro por el omeprazol,P03
+CASO_C,Casos rápidos,Vegano con B12 «cuando se acuerda»,Aporte irregular de B12; preguntar producto; dosis y frecuencia real,P04
+CASO_D,Casos rápidos,Trabaja al aire libre con ropa larga y protector,Posible baja ingesta de vitamina D; faltan huevos; fortificados y suplementos; no retirar el protector,P05

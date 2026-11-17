@@ -1,0 +1,35 @@
+frame,etiqueta_neo4j,padre,descripcion,origen
+F-Paciente,Paciente,,Adulto cuyo caso se evalúa,Todos
+F-Hecho,Hecho,,Dato atómico del caso con fuente y confianza de extracción,SENDA; Nuñez; Bataller
+F-RegistroAlimentario,RegistroAlimentario,,Registro de alimentos; días y comidas,Zalazar
+F-PatronAlimentario,PatronAlimentario,,Modo habitual de alimentación,Nuñez
+F-Omnivoro,PatronAlimentario,F-PatronAlimentario,Sin grupos excluidos,Nuñez
+F-Pescetariano,PatronAlimentario,F-PatronAlimentario,Excluye carnes,Nuñez
+F-Vegetariano,PatronAlimentario,F-PatronAlimentario,Excluye carnes y pescados,Nuñez
+F-Ovolactovegetariano,PatronAlimentario,F-Vegetariano,Hereda exclusiones de Vegetariano,Nuñez
+F-Vegano,PatronAlimentario,F-Vegetariano,Excluye además huevos y lácteos,Nuñez
+F-CondicionDerivacion,CondicionDerivacion,,Condición del catálogo que obliga a derivar,ADM; B12; VD; FE
+F-CriterioAlcance,CriterioAlcance,,Motivo por el que el caso no pertenece al alcance,Zalazar; PI3
+F-Nutriente,Nutriente,,Nutriente evaluado (CA / FE / B12 / VD),Todos
+F-ValorReferencia,ValorReferencia,,Referencia por nutriente; edad y sexo,NIH ODS
+F-CriterioCandidato,CriterioCandidato,,Criterio o parámetro con estado de validación,Nuñez; Ramirez
+F-Fuente,Fuente,,Superclase abstracta de alimentos y suplementos,PG1
+F-Alimento,Alimento,F-Fuente,Alimento del registro,Todos
+F-AlimentoFortificado,Fortificado,F-Alimento,Rol solapable (segunda etiqueta) del alimento con rótulo,Ramirez (H6)
+F-Suplemento,Suplemento,F-Fuente,Producto con dosis,Todos
+F-FuenteNoConfiable,FuenteNoConfiable,,Lo que se cree fuente pero no aporta (no hereda de F-Fuente),Nuñez; Bataller
+F-Consumo,Consumo,,Consumo registrado de un alimento,Santibañez; Ramirez
+F-Comida,Comida,,Episodio de comida del paciente,Santibañez
+F-ExposicionSolar,ExposicionSolar,,Hábito de exposición solar,Bataller
+F-Localidad,Localidad,,Lugar de residencia con índice UV mensual,Bataller
+F-FactorModificador,FactorModificador,,Medicamento / inhibidor / potenciador,B12; FE; VD
+F-EvaluacionAdmisibilidad,EvaluacionAdmisibilidad,,Veredicto previo de SM-ADM,Zalazar
+F-EvaluacionNutriente,EvaluacionNutriente,,Resultado de un submódulo de nutriente,Todos
+F-ElementoResultado,ElementoResultado,,Superclase de PasoTraza / DatoFaltante / Advertencia,SENDA
+F-ResultadoConsolidado,ResultadoConsolidado,,Une las cuatro evaluaciones,SM-INT
+F-ModeloDifuso,ModeloDifuso,,Sistema Mamdani de un submódulo (PI3),PI3
+F-VariableDifusa,VariableDifusa,,Variable lingüística,PI3
+F-TerminoDifuso,TerminoDifuso,,Etiqueta con función de pertenencia,PI3
+F-ReglaDifusa,ReglaDifusa,,Regla borrosa SI…ENTONCES,PI3
+F-Regla,Regla,,Regla crisp consolidada de PG1,PG1
+F-Usuario,Usuario,,Nutricionista o médico,PG1

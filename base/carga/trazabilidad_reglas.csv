@@ -1,0 +1,123 @@
+trabajo_origen,id_original,id_consolidado,tratamiento
+SENDA,R01,ADM-01,Unificada
+SENDA,R02,ADM-03,Unificada
+SENDA,R03,G-05,Unificada
+SENDA,R04,G-07,Unificada
+SENDA,R05,R05,Se conserva
+SENDA,R06,R06,Se conserva
+SENDA,R07,G-01,Unificada
+SENDA,R08,CA-01,Unificada
+SENDA,R09,CA-02,Unificada
+SENDA,R10,G-07,Unificada
+SENDA,R11,FE-01,Renumerada / generalizada
+SENDA,R12,G-07,Unificada
+SENDA,R13,FE-02,Unificada
+SENDA,R14,R14,Se conserva
+SENDA,R15,G-07,Unificada
+SENDA,R16,G-13,Renumerada / generalizada
+SENDA,R17,ADM-02,Unificada
+SENDA,R18,ADM-02,Unificada
+SENDA,R19,META-03,Renumerada / generalizada
+SENDA,R20,G-08,Unificada
+SENDA,R21,G-04,Unificada
+SENDA,R22,ADM-04,Unificada
+Zalazar PI2,R-A1,ADM-01,Unificada
+Zalazar PI2,R-A2,ADM-02,Unificada
+Zalazar PI2,R-A3,ADM-03,Unificada
+Zalazar PI2,R-A4,META-06,Unificada
+Zalazar PI2,R-A5,ADM-04,Unificada
+Zalazar PI2,R-A6,ADM-05,Renumerada / generalizada
+Zalazar PI2,R-A6,ADM-06,Renumerada / generalizada
+Zalazar PI2,R-A7,META-05,Unificada
+Zalazar PI2,R-A8,ADM-07,Renumerada / generalizada
+Ramirez PI2,CAL-01,G-04,Unificada
+Ramirez PI2,CAL-02,G-01,Unificada
+Ramirez PI2,CAL-03,CA-03,Renumerada / generalizada
+Ramirez PI2,CAL-04,G-05,Unificada
+Ramirez PI2,CAL-05,META-02,Unificada
+Ramirez PI2,CAL-06,G-08,Unificada
+Ramirez PI2,CAL-07,ADM-02,Unificada
+Ramirez PI2,CAL-08,G-10,Unificada
+Ramirez PI2,CAL-09,G-15,Renumerada / generalizada
+Ramirez PI2,CAL-10,META-05,Unificada
+Ramirez PI2,CAL-11,META-07,Renumerada / generalizada
+Ramirez PI2,CAL-12,G-06,Unificada
+Ramirez PI2,R08,CA-01,Unificada
+Ramirez PI2,R09,CA-02,Unificada
+Ramirez PI2,R10,G-07,Unificada
+Santibañez PI1,R-Fe-01,ADM-02,Unificada
+Santibañez PI1,R-Fe-02,FE-07,Unificada
+Santibañez PI1,R-Fe-03,FE-03,Unificada
+Santibañez PI1,R-Fe-04,FE-04,Unificada
+Santibañez PI1,R-Fe-05,FE-05,Unificada
+Santibañez PI1,R-Fe-06,FE-08,Unificada
+Santibañez PI1,R-Fe-07,FE-02,Unificada
+Santibañez PI1,R-Fe-08,FE-08,Unificada
+Santibañez PI1,R-Fe-09,G-05,Unificada
+Santibañez PI2,R01,ADM-01,Unificada
+Santibañez PI2,R02,ADM-02,Unificada
+Santibañez PI2,R03,META-06,Unificada
+Santibañez PI2,R04,G-05,Unificada
+Santibañez PI2,R05,FE-02,Unificada
+Santibañez PI2,R06,FE-02,Unificada
+Santibañez PI2,R07,FE-03,Unificada
+Santibañez PI2,R08,FE-04,Unificada
+Santibañez PI2,R09,FE-05,Unificada
+Santibañez PI2,R10,FE-06,Renumerada / generalizada
+Santibañez PI2,R11,FE-09,Renumerada / generalizada
+Santibañez PI2,R12,FE-08,Unificada
+Santibañez PI2,R13,FE-07,Unificada
+Santibañez PI2,R14,FE-10,Renumerada / generalizada
+Nuñez PI2,B12-01,G-12,Unificada
+Nuñez PI2,B12-02,G-12,Unificada
+Nuñez PI2,B12-03,B12-03,Se conserva
+Nuñez PI2,B12-04,G-04,Unificada
+Nuñez PI2,B12-05,G-07,Unificada
+Nuñez PI2,B12-06,G-05,Unificada
+Nuñez PI2,B12-07,B12-07,Se conserva
+Nuñez PI2,B12-08,G-09,Unificada
+Nuñez PI2,B12-09,G-09,Unificada
+Nuñez PI2,B12-10,G-02,Unificada
+Nuñez PI2,B12-11,G-11,Unificada
+Nuñez PI2,B12-12,B12-12,Se conserva
+Nuñez PI2,B12-13,META-02,Unificada
+Nuñez PI2,B12-14,G-08,Unificada
+Nuñez PI2,B12-15,G-10,Unificada
+Nuñez PI2,B12-16,META-06,Unificada
+Nuñez PI2,B12-17,G-06,Unificada
+Nuñez PI2,B12-18,B12-18,Se conserva
+Nuñez PI2,B12-19,G-14,Unificada
+Nuñez PI2,B12-20,B12-20,Se conserva
+Nuñez PI2,R05,R05,Se conserva
+Nuñez PI2,R06,R06,Se conserva
+Nuñez PI2,R07,G-01,Unificada
+Bataller PI2,R14,R14,Se conserva
+Bataller PI2,R15,VD-13,Unificada
+Bataller PI2,VD-01,G-12,Unificada
+Bataller PI2,VD-02,G-12,Unificada
+Bataller PI2,VD-03,VD-03,Se conserva
+Bataller PI2,VD-04,VD-04,Se conserva
+Bataller PI2,VD-05,G-01,Unificada
+Bataller PI2,VD-06,G-02,Unificada
+Bataller PI2,VD-07,G-04,Unificada
+Bataller PI2,VD-08,G-09,Unificada
+Bataller PI2,VD-09,G-05,Unificada
+Bataller PI2,VD-10,G-09,Unificada
+Bataller PI2,VD-11,VD-11,Se conserva
+Bataller PI2,VD-12,VD-12,Se conserva
+Bataller PI2,VD-13,VD-13,Se conserva
+Bataller PI2,VD-14,VD-14,Se conserva
+Bataller PI2,VD-15,VD-15/17,Unificada
+Bataller PI2,VD-16,G-11,Unificada
+Bataller PI2,VD-17,VD-15/17,Unificada
+Bataller PI2,VD-18,G-06,Unificada
+Bataller PI2,VD-19,META-02,Unificada
+Bataller PI2,VD-20,G-08,Unificada
+Bataller PI2,VD-21,VD-21,Se conserva
+Bataller PI2,VD-22,VD-22,Se conserva
+Bataller PI2,VD-23,G-14,Unificada
+Bataller PI2,VD-24,G-10,Unificada
+Bataller PI2,VD-25,VD-25,Se conserva
+Bataller PI2,VD-26,META-01,Renumerada / generalizada
+Bataller PI2,VD-27,VD-27,Se conserva
+Bataller PI2,VD-28,G-03,Renumerada / generalizada

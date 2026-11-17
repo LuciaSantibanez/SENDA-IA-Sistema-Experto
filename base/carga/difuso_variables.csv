@@ -1,0 +1,14 @@
+id,nombre,modelo,rol,universo_min,universo_max,unidad,formula,decision_pg2,reemplaza
+V-ADM-DIAS,dias_registro,MD-ADM,ENTRADA,0,7,días,Días que representan alimentación habitual (se trunca en 7),CONSERVAR,PARAM_MIN_DIAS
+V-ADM-COM,comidas_principales,MD-ADM,ENTRADA,0,4,comidas/día,Promedio de desayuno / almuerzo / merienda / cena presentes,CONSERVAR,
+V-ADM-CAL,calidad_registro,MD-ADM,SALIDA,0,100,índice,Índice de confianza (no probabilidad),CONSERVAR,
+V-CA-ING,ingesta_relativa_ca,MD-CA,ENTRADA,0,200,% referencia,100 × ingesta_total / referencia CA-05,FUSIONAR (ex cercania_criterio_calcio: x = ingesta_relativa − 100),PARAM_UMBRAL_CA
+V-CA-VAR,variabilidad_diaria_ca,MD-CA,ENTRADA,0,100,% (CV),100 × desvío estándar / media de los totales diarios (n ≥ 2),CONSERVAR,
+V-CA-PRI,prioridad_revision_ca,MD-CA,SALIDA,0,100,índice,Prioridad auxiliar de revisión,CONSERVAR (σ normalizado 20 → 21.23),
+V-FE-NOH,consumo_hierro_no_hemo,MD-FE,ENTRADA,0,21,porciones/semana,Σ porciones de grupos fuente de hierro no hemo (se trunca en 21),CONSERVAR (instancia de nivel_consumo(grupo)),
+V-FE-INH,inhibidores_en_comidas,MD-FE,ENTRADA,0,21,comidas/semana,Σ comidas con inhibidor coincidente (FE-02) + tomas de calcio con comidas (FE-11),CONSERVAR,
+V-B12-ING,ingesta_relativa_b12,MD-B12,ENTRADA,0,200,% referencia,100 × ingesta dietaria B12 / 2.4 µg,CONSERVAR,PARAM_UMBRAL_B12
+V-B12-ADH,adherencia_suplemento_b12,MD-B12,ENTRADA,0,100,% pauta,100 × tomas realizadas / tomas indicadas (28 días),CONSERVAR,PARAM_REGULARIDAD_SUPL
+V-VD-APO,aporte_oral_relativo_vd,MD-VD,ENTRADA,0,200,% referencia,100 × (dieta + suplemento promedio) / 15 µg,CONSERVAR (misma escala y cruces que ingesta_relativa; σ mayor),PARAM_UMBRAL_VD
+V-VD-EXP,exposicion_uvb_efectiva,MD-VD,ENTRADA,0,100,índice,E = 100 · f_tiempo · f_UV · f_piel · f_protector · f_fototipo,FUSIONAR (tiempo; estación; latitud; protección; fototipo),PARAM_TIEMPO_SOL;PARAM_LATITUD
+V-RIESGO,riesgo_insuficiencia,MD-FE;MD-B12;MD-VD,SALIDA,0,100,índice,Índice de compatibilidad con ingesta insuficiente (no probabilidad),FUSIONAR (salida común FE / B12 / VD),

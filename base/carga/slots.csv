@@ -1,0 +1,57 @@
+frame,slot,tipo,dominio,cardinalidad,default,representacion,faceta
+F-Paciente,id,texto,único,1,—,PROPIEDAD,Restricción de unicidad
+F-Paciente,edad,entero,18..64 (fuera → ADM-01),1,—,PROPIEDAD,18 y 64 incluidos con nota de borde
+F-Paciente,sexo,F / M / DESCONOCIDO,—,1,DESCONOCIDO,PROPIEDAD,Elige la referencia de CA y FE
+F-Paciente,estado_fisiologico,NINGUNO / EMBARAZO / LACTANCIA / NO_DECLARADO,—,1,NO_DECLARADO,PROPIEDAD,EMBARAZO o LACTANCIA → ADM-01
+F-Paciente,suplementos,SI / NO / DESCONOCIDO,—,1,DESCONOCIDO,PROPIEDAD,NO solo si es explícito (META-06)
+F-Paciente,sigue,→ F-PatronAlimentario,—,1,—,RELACION:SIGUE,Compartido por los 4 nutrientes
+F-Paciente,registra,→ F-Consumo,—,0..n,∅,RELACION:REGISTRA,Lista vacía no demuestra ausencia
+F-Paciente,toma,→ F-Suplemento,—,0..n,∅,RELACION:TOMA {pauta_tomas_28d; tomas_realizadas_28d; regularidad; momento_toma; frecuencia_conocida},Regularidad en la relación (es del paciente)
+F-Paciente,presenta,→ F-CondicionDerivacion,—,0..n,∅,RELACION:PRESENTA {estado},if-added PRESENTE → ADM-02 o G-12
+F-Paciente,usa,→ F-Medicamento,—,0..n,∅,RELACION:USA {tiempo_uso_meses},if-added → G-11
+F-Paciente,reside_en,→ F-Localidad,—,0..1,—,RELACION:RESIDE_EN,Solo SM-VD
+F-Paciente,tiene_habito_de,→ F-ExposicionSolar,—,0..1,—,RELACION:TIENE_HABITO_DE,Solo SM-VD
+F-Paciente,declara_fuente,→ F-FuenteNoConfiable,—,0..n,∅,RELACION:DECLARA_FUENTE,if-added → G-09
+F-Hecho,atributo / valor / fuente,texto,DESCONOCIDO ≠ NO ≠ 0,1,DESCONOCIDO,PROPIEDAD,if-changed → META-02
+F-Hecho,confianza_extraccion,real,0..1,1,—,PROPIEDAD,< PARAM_CONFIANZA_EXTRACCION → revisar (no es grado difuso)
+F-RegistroAlimentario,dias_registro,real,0..7,1,—,PROPIEDAD + estado_dias,Entrada de MD-ADM
+F-RegistroAlimentario,comidas_principales,real,0..4,1,—,PROPIEDAD + estado_comidas,Entrada de MD-ADM
+F-RegistroAlimentario,incluye_habil / incluye_finde,booleano,—,1,false,PROPIEDAD,Tope crisp de calidad (Q1)
+F-RegistroAlimentario,relevamiento_cerrado,SI / NO / DESCONOCIDO,—,1,DESCONOCIDO,PROPIEDAD,Condiciona TOTAL_REGISTRO (G-15)
+F-RegistroAlimentario,dia_atipico_unico / sin_frecuencias / comida_aislada,booleano,—,1,false,PROPIEDAD,→ ADM-03
+F-RegistroAlimentario,totales_diarios_ca,lista de reales,mg/día,0..1,—,PROPIEDAD,Entrada de MD-CA (variabilidad)
+F-RegistroAlimentario,calidad_registro,ALTA / MEDIA / BAJA,—,1,—,PROPIEDAD (derivada),La asigna el puente ADM-06
+F-PatronAlimentario,codigo,OMNIVORO / PESCETARIANO / VEGETARIANO / OVOLACTOVEGETARIANO / VEGANO,—,1,—,PROPIEDAD,Nodo de clase compartido
+F-PatronAlimentario,excluye,→ GrupoAlimento,—,0..n,heredado,RELACION:EXCLUYE,Se hereda por ES_UN*
+F-PatronAlimentario,requiere_fuente_alternativa,→ F-Nutriente,—,0..n,heredado,RELACION:REQUIERE_FUENTE_ALTERNATIVA,Activa R05 / CA-01 / FE-01
+F-CondicionDerivacion,alcance,GENERAL / ESPECIFICA,—,1,—,PROPIEDAD,GENERAL → ADM-02; ESPECIFICA → G-12
+F-CondicionDerivacion,estado_validacion,CANDIDATA / VALIDADA,—,1,CANDIDATA,PROPIEDAD,Catálogo general VALIDADO (Q4)
+F-Nutriente,codigo,CA / FE / B12 / VD,—,1,—,PROPIEDAD,Clave del parámetro n
+F-ValorReferencia,valor / limite_superior,real,mg o µg,1,—,PROPIEDAD,Una fila por edad y sexo
+F-CriterioCandidato,valor,número / texto,PENDIENTE si no hay valor,1,PENDIENTE,PROPIEDAD,Nunca se rellena con un número inventado
+F-CriterioCandidato,estado_validacion,CANDIDATO / VALIDADO / RECHAZADO,—,1,CANDIDATO,PROPIEDAD,if-changed → META-02
+F-Alimento,grupo,→ GrupoAlimento,—,1,—,RELACION:PERTENECE_A,Permite heredar fuentes por grupo
+F-Alimento,aporta,→ F-Nutriente,{cantidad; unidad; forma; biodisponibilidad},0..n,∅,RELACION:APORTA,Contenido por porción
+F-AlimentoFortificado,declara,→ F-Nutriente,{valor SI/NO/DESCONOCIDO; contenido},1..n,DESCONOCIDO,RELACION:DECLARA,Reemplaza F-DeclaracionRotulo; G-04 / G-09 / G-10
+F-Suplemento,contiene,→ F-Nutriente,{dosis; unidad},1..n,—,RELACION:CONTIENE,G-01 / G-02
+F-FuenteNoConfiable,no_aporta,→ F-Nutriente,{motivo},1..n,—,RELACION:NO_APORTA,G-09
+F-Consumo,frecuencia_semanal,real,porciones/semana,1,—,PROPIEDAD + estado_frecuencia,No convertir «seguido» en número
+F-Consumo,de,→ F-Alimento,—,1,—,RELACION:DE,—
+F-Consumo,ocurre_en,→ F-Comida,{veces_semana; coincide_con_comida},0..n,∅,RELACION:OCURRE_EN,FE-02
+F-ExposicionSolar,tiempo_aire_libre_h,real,h/semana en franja UVB,1,—,PROPIEDAD + estado_tiempo,f_tiempo
+F-ExposicionSolar,cobertura_vestimenta / protector_solar / fototipo,categórico,BAJA-MEDIA-ALTA / NUNCA-A_VECES-SIEMPRE / I-VI,1,DESCONOCIDO,PROPIEDAD,Coeficientes en FactorExposicion
+F-ExposicionSolar,a_traves_de_vidrio,SI / NO / DESCONOCIDO,—,1,DESCONOCIDO,PROPIEDAD,SI → horas valen 0 (G-09)
+F-EvaluacionAdmisibilidad,veredicto,ADMISIBLE / INFORMACION_INSUFICIENTE / DERIVAR / FUERA_DE_ALCANCE,—,1,—,PROPIEDAD,≠ ADMISIBLE → META-05
+F-EvaluacionAdmisibilidad,calidad_registro / indice_calidad,ALTA-MEDIA-BAJA / real,—,0..1,—,PROPIEDAD,Puente de MD-ADM
+F-EvaluacionNutriente,estado,4 estados de PG0,—,0..1,sin asignar,PROPIEDAD + RELACION:TIENE_ESTADO,Lo resuelve META-01
+F-EvaluacionNutriente,situacion_interna,EN_PROCESO / PENDIENTE_VALIDACION / CONCLUIDA,—,1,EN_PROCESO,PROPIEDAD,PENDIENTE_VALIDACION deja el estado sin asignar
+F-EvaluacionNutriente,ingesta_estimada / ingesta_relativa / ingesta_alcance,real / real / PARCIAL-TOTAL_REGISTRO,—,1,—,PROPIEDAD,G-15
+F-EvaluacionNutriente,fuente_verificada,SI / NO / DESCONOCIDO,—,1,NO,PROPIEDAD,SIN_SEÑAL exige SI (G-08)
+F-EvaluacionNutriente,capa_difusa_estado,HABILITADA / EJECUTADA / NO_APLICA_*,—,1,—,PROPIEDAD,Guardas de la capa difusa
+F-EvaluacionNutriente,riesgo_difuso / etiqueta_riesgo,real / BAJO-MODERADO-ALTO,—,0..1,—,PROPIEDAD,Puente FZ-05 (provisional mientras CANDIDATO)
+F-ElementoResultado,regla / texto / nutrientes,texto,—,1,—,NODOS PasoTraza / DatoFaltante / Advertencia,Solo lo activado se explica
+F-ModeloDifuso,operadores,MIN / MAX / 1-MU / MIN / MAX / CENTROIDE,—,1,—,PROPIEDAD,Mamdani
+F-VariableDifusa,universo_min / universo_max / unidad,real,—,1,—,PROPIEDAD,Escala común por familia
+F-TerminoDifuso,tipo_funcion / centro / sigma,GAUSSIANA / HOMBRO_IZQ / HOMBRO_DER; real; real,—,1,—,PROPIEDAD,Parámetros en el grafo (no en el código)
+F-ReglaDifusa,antecedente,→ F-TerminoDifuso,{grupo; negado},1..n,—,RELACION:ANTECEDENTE,Forma normal conjuntiva
+F-ReglaDifusa,consecuente,→ F-TerminoDifuso,—,1,—,RELACION:CONSECUENTE,—

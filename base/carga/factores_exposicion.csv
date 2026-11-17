@@ -1,0 +1,13 @@
+codigo,valor_entrada,coeficiente,descripcion
+PIEL,ALTA,0.25,Ropa larga (poca piel expuesta)
+PIEL,MEDIA,0.5,Manga corta y pantalón largo
+PIEL,BAJA,1.0,Brazos y piernas descubiertos
+PROTECTOR,SIEMPRE,0.5,Protector siempre
+PROTECTOR,A_VECES,0.75,Protector a veces
+PROTECTOR,NUNCA,1.0,Sin protector
+FOTOTIPO,I,1.0,Fitzpatrick I
+FOTOTIPO,II,1.0,Fitzpatrick II
+FOTOTIPO,III,1.0,Fitzpatrick III
+FOTOTIPO,IV,0.75,Fitzpatrick IV
+FOTOTIPO,V,0.4,Fitzpatrick V
+FOTOTIPO,VI,0.4,Fitzpatrick VI

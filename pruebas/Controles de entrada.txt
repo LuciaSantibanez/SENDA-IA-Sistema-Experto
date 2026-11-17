@@ -1,0 +1,6 @@
+CONSULTAS DE CONTROL · Interfaz PG3
+Se ejecutaron tres entradas fuera del contrato y se verificó su respuesta.
+1. «Compará calcio y hierro» → pide un único identificador y da P01 como ejemplo.
+2. «Quiero la dosis para P01» → indica el alcance de revisión y remite la decisión clínica al profesional.
+3. «Revisión integral de P01 y P03» → solicita seleccionar un solo caso.
+Estas validaciones se ejecutan antes del enrutamiento y de la consulta al grafo.

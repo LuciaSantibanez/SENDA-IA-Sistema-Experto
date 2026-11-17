@@ -1,0 +1,11 @@
+id,caso,escenario,edad,sexo,estado_fisiologico,patron,mes,fecha,suplementos
+P01,Vegana con bebida de almendras de rótulo desconocido (caso A / integrado 1),"MIXTO: crisp positivo en FE, datos faltantes en CA-B12-VD",29,F,NINGUNO,VEGANO,7,2026-07-14,NO
+P02,Celiaquía no controlada (caso integrado 2),NEGATIVO: derivación general,45,M,NINGUNO,OMNIVORO,3,2026-03-10,NO
+P03,Omnívora de 55 años con omeprazol y suplemento de calcio + D (caso B / integrado 3),POSITIVO: fuentes verificadas + advertencias cruzadas; VD difuso,55,F,NINGUNO,OMNIVORO,1,2026-01-20,SI
+P04,Vegano con B12 «cuando se acuerda» (caso C),NEGATIVO de datos + excepción FE (Q19),34,M,NINGUNO,VEGANO,8,2026-08-05,SI
+P05,"Trabaja al aire libre con ropa larga y protector (caso D, datos completados)",DIFUSO: VD moderado y proyección invernal alta,25,F,NINGUNO,OMNIVORO,1,2026-01-28,NO
+P06,Embarazada de 30 años,NEGATIVO: fuera de alcance,30,F,EMBARAZO,OMNIVORO,4,2026-04-02,SI
+P07,Declara ser vegano y registra huevos,NEGATIVO: contradicción (ADM-04),27,M,NINGUNO,VEGANO,6,2026-06-11,NO
+P08,Registro de un solo día ordinario,DIFUSO ADM: calidad BAJA → G-06,40,M,NINGUNO,OMNIVORO,9,2026-09-15,NO
+P09,Ovolactovegetariano con ingesta intermedia (Nuñez caso B / Santibañez caso B),DIFUSO: zona gris en B12 y FE; VD alto provisional,34,M,NINGUNO,OVOLACTOVEGETARIANO,5,2026-05-19,NO
+P10,Omnívoro de 52 años con gastritis atrófica,"NEGATIVO específico (G-12, Q5)",52,M,NINGUNO,OMNIVORO,10,2026-10-07,NO

@@ -1,0 +1,24 @@
+nombre,valor,unidad,estado_validacion,comportamiento,evidencia
+PARAM_MIN_DIAS,3,días,VALIDADO,Ancla del término «parcial» de dias_registro; con menos días la calidad es BAJA y G-06 bloquea lo cuantitativo,Q1;Q3
+PARAM_UMBRAL_CA,70,% referencia,CANDIDATO,G-07 no alerta: PENDIENTE_VALIDACION (META-07),Q8;Q9
+PARAM_UMBRAL_FE,70,% referencia,CANDIDATO,Reemplazado por MD-FE en la zona gris,Q8;Q9
+PARAM_UMBRAL_B12,70,% referencia,CANDIDATO,Reemplazado por MD-B12 (ingesta_relativa_b12),Q8;Q9
+PARAM_UMBRAL_VD,70,% referencia,CANDIDATO,Reemplazado por MD-VD (aporte_oral_relativo_vd),Q8;Q9
+PARAM_REGULARIDAD_SUPL,PENDIENTE,% pauta,CANDIDATO,Reemplazado por adherencia_suplemento_b12; en VD por aporte promedio,Q28
+PARAM_USO_PROLONGADO,PENDIENTE,meses,CANDIDATO,G-11 emite advertencia provisional,Q29
+PARAM_EDAD_ABSORCION,50,años,CANDIDATO,B12-12 y VD-17 emiten advertencia,Q23
+PARAM_MARGEN_INHIBIDOR,1-2,horas,CANDIDATO,FE-02 cuenta el inhibidor si coincide con la comida,Q17
+PARAM_FREC_ANIMAL,—,porciones/semana,RECHAZADO,B12-20 suspendida: se piden cantidades,Q21
+PARAM_TIEMPO_SOL,—,h/semana,RECHAZADO,Reemplazado por el índice exposicion_uvb_efectiva,Q24
+PARAM_LATITUD,—,grados,RECHAZADO,Reemplazado por el índice UV mensual de la localidad,Q25
+CATALOGO_DERIVACION,lista Q4,—,VALIDADO,ADM-02 deriva con cualquier condición PRESENTE del catálogo,Q4
+PARAM_CONFIANZA_EXTRACCION,0.7,0–1,CANDIDATO,Hechos con confianza menor se revisan antes de razonar (no es variable difusa),—
+PARAM_FZ_ADM,ver MD-ADM,—,CANDIDATO,Calidad informada como provisional,Q1;Q3
+PARAM_FZ_CA,ver MD-CA,—,CANDIDATO,Prioridad auxiliar; no asigna estado,Q9
+PARAM_FZ_FE,ver MD-FE,—,CANDIDATO,PENDIENTE_VALIDACION si la conclusión depende de la capa,—
+PARAM_FZ_B12,ver MD-B12,—,CANDIDATO,PENDIENTE_VALIDACION si la conclusión depende de la capa,Q9;Q28
+PARAM_FZ_VD,ver MD-VD,—,CANDIDATO,PENDIENTE_VALIDACION si la conclusión depende de la capa,Q9;Q24
+PARAM_INDICE_UVB_VD,coeficientes f_piel / f_protector / f_fototipo,—,CANDIDATO,Se usan para calcular E,Q24;Q27
+POLITICA_CORTES_SALIDA,33.5 / 66.5,índice 0–100,CANDIDATO,Etiqueta final de riesgo por rango efectivo del centroide,—
+POLITICA_ZONA_MODERADA,PENDIENTE,—,CANDIDATO,Zona moderada: PENDIENTE_VALIDACION (no se elige POSIBLE ni SIN_SEÑAL),Q11
+POLITICA_META_01,FUERA > POSIBLE > INFO > SIN_SEÑAL,—,CANDIDATO,Se aplica como en PG1 hasta validar,Q11

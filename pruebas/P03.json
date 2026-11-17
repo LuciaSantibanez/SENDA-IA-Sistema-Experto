@@ -1,0 +1,776 @@
+{
+  "pregunta": "Contrastá B12 y vitamina D de P03",
+  "modelo": "qwen2.5:1.5b",
+  "ruta_llm": {
+    "paciente": "P03",
+    "modulos": [
+      "B12",
+      "VD"
+    ]
+  },
+  "ruta_verificada": true,
+  "paciente": "P03",
+  "modulos": {
+    "B12": {
+      "resumen": {
+        "accion_admisibilidad": "NINGUNA",
+        "estado_concluido": "SIN_SEÑAL_DETECTADA",
+        "estado": "SIN_SEÑAL_DETECTADA",
+        "resultado_provisional": null,
+        "ingesta_alcance": "TOTAL_REGISTRO",
+        "situacion_interna": "CONCLUIDA",
+        "traza_admisibilidad": [
+          {
+            "texto": "D1 a D4 superados: se habilitan CA, FE, B12 y VD",
+            "regla": "ADM-05",
+            "efecto": "VEREDICTO"
+          },
+          {
+            "texto": "SI días ES amplia Y comidas ES completa ENTONCES calidad ES alta · α = 1.0",
+            "regla": "ADM-F01",
+            "efecto": "ACTIVACION_DIFUSA"
+          },
+          {
+            "texto": "SI días ES amplia Y comidas ES parcial ENTONCES calidad ES media · α = 0.044",
+            "regla": "ADM-F03",
+            "efecto": "ACTIVACION_DIFUSA"
+          },
+          {
+            "texto": "Índice de calidad 79.3 (dominante: alta); calidad informada: ALTA",
+            "regla": "ADM-F07",
+            "efecto": "CALIDAD"
+          }
+        ],
+        "etiqueta_prioridad": null,
+        "ingesta_relativa": 164.286,
+        "unidad": "µg",
+        "ingesta_estimada": 3.943,
+        "paciente": "P03",
+        "prioridad_revision_ca": null,
+        "capa_difusa_estado": "NO_APLICA_FUENTE_CRISP",
+        "fundamento": "FUENTE_VERIFICADA",
+        "advertencias": [
+          {
+            "regla": "B12-12",
+            "texto": "Edad 55 años con B12 solo de alimentos: la absorción puede ser menor"
+          },
+          {
+            "regla": "G-11",
+            "texto": "Uso de Inhibidores de la bomba de protones (omeprazol) hace 60 meses: puede reducir la absorción de Vitamina B12; sugerir consulta médica"
+          }
+        ],
+        "datos_faltantes": [],
+        "admisibilidad": "ADMISIBLE",
+        "traza": [
+          {
+            "texto": "Ingesta total 3.943 µg/día ≥ referencia 2.4",
+            "estado_propuesto": null,
+            "regla": "G-14",
+            "efecto": "FUENTE_VERIFICADA"
+          },
+          {
+            "texto": "Advertencia por medicación (no cambia el estado)",
+            "estado_propuesto": null,
+            "regla": "G-11",
+            "efecto": "ADVERTENCIA"
+          },
+          {
+            "texto": "Advertencia por edad",
+            "estado_propuesto": null,
+            "regla": "B12-12",
+            "efecto": "ADVERTENCIA"
+          },
+          {
+            "texto": "Fuente verificada (DIETARIA) y ninguna regla de estado ni criterio pendiente: sin señal (no significa estado normal)",
+            "estado_propuesto": null,
+            "regla": "G-08",
+            "efecto": "ESTADO"
+          }
+        ],
+        "nutriente": "B12",
+        "referencia": 2.4
+      },
+      "traza": [
+        {
+          "evaluacion": "P03-ADM",
+          "orden": 40,
+          "regla": "ADM-05",
+          "razonamiento": "D1 a D4 superados: se habilitan CA, FE, B12 y VD",
+          "efecto": "VEREDICTO",
+          "estado_propuesto": null,
+          "evidencias": [
+            {
+              "valor": null,
+              "relato": null,
+              "atributo": null,
+              "id": "P03",
+              "nombre": null
+            }
+          ],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P03-ADM",
+          "orden": 44,
+          "regla": "ADM-F01",
+          "razonamiento": "SI días ES amplia Y comidas ES completa ENTONCES calidad ES alta · α = 1.0",
+          "efecto": "ACTIVACION_DIFUSA",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P03-ADM",
+          "orden": 44,
+          "regla": "ADM-F03",
+          "razonamiento": "SI días ES amplia Y comidas ES parcial ENTONCES calidad ES media · α = 0.044",
+          "efecto": "ACTIVACION_DIFUSA",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P03-ADM",
+          "orden": 45,
+          "regla": "ADM-F07",
+          "razonamiento": "Índice de calidad 79.3 (dominante: alta); calidad informada: ALTA",
+          "efecto": "CALIDAD",
+          "estado_propuesto": null,
+          "evidencias": [
+            {
+              "valor": null,
+              "relato": null,
+              "atributo": null,
+              "id": "P03-REG",
+              "nombre": null
+            }
+          ],
+          "fuentes": [
+            "PI3_ZALAZAR"
+          ],
+          "preguntas_experta": [
+            "Q1"
+          ]
+        },
+        {
+          "evaluacion": "P03-B12",
+          "orden": 50,
+          "regla": "G-14",
+          "razonamiento": "Ingesta total 3.943 µg/día ≥ referencia 2.4",
+          "efecto": "FUENTE_VERIFICADA",
+          "estado_propuesto": null,
+          "evidencias": [
+            {
+              "valor": 2.4,
+              "relato": null,
+              "atributo": null,
+              "id": "REF-B12",
+              "nombre": null
+            }
+          ],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P03-B12",
+          "orden": 80,
+          "regla": "G-11",
+          "razonamiento": "Advertencia por medicación (no cambia el estado)",
+          "efecto": "ADVERTENCIA",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [
+            "NIH_ODS"
+          ],
+          "preguntas_experta": [
+            "Q29"
+          ]
+        },
+        {
+          "evaluacion": "P03-B12",
+          "orden": 81,
+          "regla": "B12-12",
+          "razonamiento": "Advertencia por edad",
+          "efecto": "ADVERTENCIA",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [
+            "NIH_ODS"
+          ],
+          "preguntas_experta": [
+            "Q23"
+          ]
+        },
+        {
+          "evaluacion": "P03-B12",
+          "orden": 95,
+          "regla": "G-08",
+          "razonamiento": "Fuente verificada (DIETARIA) y ninguna regla de estado ni criterio pendiente: sin señal (no significa estado normal)",
+          "efecto": "ESTADO",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [
+            "PG1"
+          ],
+          "preguntas_experta": []
+        }
+      ],
+      "difuso": {
+        "indice": null,
+        "etiqueta": null,
+        "prioridad_ca": null,
+        "activaciones": []
+      },
+      "contexto_PI4": {
+        "estado": "SIN_SEÑAL_DETECTADA",
+        "criterios_no_validados_usados": [],
+        "patron": "OMNIVORO",
+        "resultado_provisional": null,
+        "condiciones_derivacion": [],
+        "etiqueta_riesgo": null,
+        "riesgo_difuso": null,
+        "adherencia_suplemento": 0.0,
+        "motivo_fuera_alcance": null,
+        "situacion_interna": "CONCLUIDA",
+        "valor_referencia": 2.4,
+        "edad": 55,
+        "ingesta_relativa": 164.286,
+        "componente_limitante": null,
+        "unidad": "µg/día",
+        "aporte_suplementos": 0.0,
+        "ingesta_estimada": 3.943,
+        "paciente": "P03",
+        "advertencias": [
+          "B12-12: Edad 55 años con B12 solo de alimentos: la absorción puede ser menor",
+          "G-11: Uso de Inhibidores de la bomba de protones (omeprazol) hace 60 meses: puede reducir la absorción de Vitamina B12; sugerir consulta médica"
+        ],
+        "regla_estado": "G-08",
+        "datos_faltantes": [],
+        "traza": [
+          {
+            "texto": "Ingesta total 3.943 µg/día ≥ referencia 2.4",
+            "respaldo": null,
+            "evidencia": [
+              "REF-B12"
+            ],
+            "estado_propuesto": null,
+            "efecto": "FUENTE_VERIFICADA",
+            "regla": "G-14"
+          },
+          {
+            "texto": "Advertencia por medicación (no cambia el estado)",
+            "respaldo": null,
+            "evidencia": [],
+            "estado_propuesto": null,
+            "efecto": "ADVERTENCIA",
+            "regla": "G-11"
+          },
+          {
+            "texto": "Advertencia por edad",
+            "respaldo": null,
+            "evidencia": [],
+            "estado_propuesto": null,
+            "efecto": "ADVERTENCIA",
+            "regla": "B12-12"
+          },
+          {
+            "texto": "Fuente verificada (DIETARIA) y ninguna regla de estado ni criterio pendiente: sin señal (no significa estado normal)",
+            "respaldo": null,
+            "evidencia": [],
+            "estado_propuesto": null,
+            "efecto": "ESTADO",
+            "regla": "G-08"
+          }
+        ],
+        "nutriente": "Vitamina B12",
+        "se_deriva_a": []
+      },
+      "admision_PI4": {
+        "accion": "NINGUNA",
+        "motivo": null,
+        "veredicto": "ADMISIBLE",
+        "tope_aplicado": "NINGUNO",
+        "indice_calidad": 79.31,
+        "dias_registro": 7.0,
+        "nombre_caso": "Omnívora de 55 años con omeprazol y suplemento de calcio + D (caso B / integrado 3)",
+        "incluye_habil": true,
+        "trazas": [
+          {
+            "texto": "D1 a D4 superados: se habilitan CA, FE, B12 y VD",
+            "valor": "ADMISIBLE",
+            "orden": 40,
+            "efecto": "VEREDICTO",
+            "regla": "ADM-05"
+          },
+          {
+            "texto": "SI días ES amplia Y comidas ES completa ENTONCES calidad ES alta · α = 1.0",
+            "valor": null,
+            "orden": 44,
+            "efecto": "ACTIVACION_DIFUSA",
+            "regla": "ADM-F01"
+          },
+          {
+            "texto": "SI días ES amplia Y comidas ES parcial ENTONCES calidad ES media · α = 0.044",
+            "valor": null,
+            "orden": 44,
+            "efecto": "ACTIVACION_DIFUSA",
+            "regla": "ADM-F03"
+          },
+          {
+            "texto": "Índice de calidad 79.3 (dominante: alta); calidad informada: ALTA",
+            "valor": "ALTA",
+            "orden": 45,
+            "efecto": "CALIDAD",
+            "regla": "ADM-F07"
+          }
+        ],
+        "incluye_finde": true,
+        "paciente": "P03",
+        "etiqueta_difusa": "alta",
+        "datos_faltantes": [],
+        "comidas_principales": 4.0,
+        "calidad_registro": "ALTA"
+      }
+    },
+    "VD": {
+      "resumen": {
+        "accion_admisibilidad": "NINGUNA",
+        "estado_concluido": null,
+        "estado": "PENDIENTE_VALIDACION",
+        "resultado_provisional": true,
+        "ingesta_alcance": "TOTAL_REGISTRO",
+        "situacion_interna": "PENDIENTE_VALIDACION",
+        "traza_admisibilidad": [
+          {
+            "texto": "D1 a D4 superados: se habilitan CA, FE, B12 y VD",
+            "regla": "ADM-05",
+            "efecto": "VEREDICTO"
+          },
+          {
+            "texto": "SI días ES amplia Y comidas ES completa ENTONCES calidad ES alta · α = 1.0",
+            "regla": "ADM-F01",
+            "efecto": "ACTIVACION_DIFUSA"
+          },
+          {
+            "texto": "SI días ES amplia Y comidas ES parcial ENTONCES calidad ES media · α = 0.044",
+            "regla": "ADM-F03",
+            "efecto": "ACTIVACION_DIFUSA"
+          },
+          {
+            "texto": "Índice de calidad 79.3 (dominante: alta); calidad informada: ALTA",
+            "regla": "ADM-F07",
+            "efecto": "CALIDAD"
+          }
+        ],
+        "etiqueta_prioridad": null,
+        "ingesta_relativa": 79.81,
+        "unidad": "µg",
+        "ingesta_estimada": 11.971,
+        "paciente": "P03",
+        "prioridad_revision_ca": null,
+        "capa_difusa_estado": "EJECUTADA",
+        "fundamento": "CRITERIO_PENDIENTE",
+        "advertencias": [],
+        "datos_faltantes": [],
+        "admisibilidad": "ADMISIBLE",
+        "traza": [
+          {
+            "texto": "Suplemento compartido CA/VD: aporta 10.0 µg de Vitamina D",
+            "estado_propuesto": null,
+            "regla": "CA-06",
+            "efecto": "DATO_COMPARTIDO"
+          },
+          {
+            "texto": "SI aporte ES baja Y exposición ES escasa ENTONCES riesgo ES alto · α = 0.037",
+            "estado_propuesto": null,
+            "regla": "VD-FZ-01",
+            "efecto": "ACTIVACION_DIFUSA"
+          },
+          {
+            "texto": "SI aporte ES baja Y exposición NO ES escasa ENTONCES riesgo ES moderado · α = 0.215",
+            "estado_propuesto": null,
+            "regla": "VD-FZ-02",
+            "efecto": "ACTIVACION_DIFUSA"
+          },
+          {
+            "texto": "SI aporte ES limítrofe Y exposición NO ES buena ENTONCES riesgo ES moderado · α = 0.967",
+            "estado_propuesto": null,
+            "regla": "VD-FZ-03",
+            "efecto": "ACTIVACION_DIFUSA"
+          },
+          {
+            "texto": "SI aporte ES adecuada O (aporte NO ES baja Y exposición ES buena) ENTONCES riesgo ES bajo · α = 0.206",
+            "estado_propuesto": null,
+            "regla": "VD-FZ-04",
+            "efecto": "ACTIVACION_DIFUSA"
+          },
+          {
+            "texto": "Riesgo difuso 49.1 → MODERADO (provisional: parámetros CANDIDATOS)",
+            "estado_propuesto": null,
+            "regla": "VD-FZ-05",
+            "efecto": "PENDIENTE"
+          },
+          {
+            "texto": "Datos completos pero la conclusión depende de un criterio CANDIDATO: PENDIENTE_VALIDACION (no se culpa al paciente con «información insuficiente»)",
+            "estado_propuesto": null,
+            "regla": "META-07",
+            "efecto": "ESTADO"
+          }
+        ],
+        "nutriente": "VD",
+        "referencia": 15
+      },
+      "traza": [
+        {
+          "evaluacion": "P03-ADM",
+          "orden": 40,
+          "regla": "ADM-05",
+          "razonamiento": "D1 a D4 superados: se habilitan CA, FE, B12 y VD",
+          "efecto": "VEREDICTO",
+          "estado_propuesto": null,
+          "evidencias": [
+            {
+              "valor": null,
+              "relato": null,
+              "atributo": null,
+              "id": "P03",
+              "nombre": null
+            }
+          ],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P03-ADM",
+          "orden": 44,
+          "regla": "ADM-F01",
+          "razonamiento": "SI días ES amplia Y comidas ES completa ENTONCES calidad ES alta · α = 1.0",
+          "efecto": "ACTIVACION_DIFUSA",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P03-ADM",
+          "orden": 44,
+          "regla": "ADM-F03",
+          "razonamiento": "SI días ES amplia Y comidas ES parcial ENTONCES calidad ES media · α = 0.044",
+          "efecto": "ACTIVACION_DIFUSA",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P03-ADM",
+          "orden": 45,
+          "regla": "ADM-F07",
+          "razonamiento": "Índice de calidad 79.3 (dominante: alta); calidad informada: ALTA",
+          "efecto": "CALIDAD",
+          "estado_propuesto": null,
+          "evidencias": [
+            {
+              "valor": null,
+              "relato": null,
+              "atributo": null,
+              "id": "P03-REG",
+              "nombre": null
+            }
+          ],
+          "fuentes": [
+            "PI3_ZALAZAR"
+          ],
+          "preguntas_experta": [
+            "Q1"
+          ]
+        },
+        {
+          "evaluacion": "P03-VD",
+          "orden": 76,
+          "regla": "CA-06",
+          "razonamiento": "Suplemento compartido CA/VD: aporta 10.0 µg de Vitamina D",
+          "efecto": "DATO_COMPARTIDO",
+          "estado_propuesto": null,
+          "evidencias": [
+            {
+              "valor": null,
+              "relato": null,
+              "atributo": null,
+              "id": "supl_calcio_d",
+              "nombre": "Calcio + vitamina D"
+            }
+          ],
+          "fuentes": [
+            "PG1"
+          ],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P03-VD",
+          "orden": 89,
+          "regla": "VD-FZ-01",
+          "razonamiento": "SI aporte ES baja Y exposición ES escasa ENTONCES riesgo ES alto · α = 0.037",
+          "efecto": "ACTIVACION_DIFUSA",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P03-VD",
+          "orden": 89,
+          "regla": "VD-FZ-02",
+          "razonamiento": "SI aporte ES baja Y exposición NO ES escasa ENTONCES riesgo ES moderado · α = 0.215",
+          "efecto": "ACTIVACION_DIFUSA",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P03-VD",
+          "orden": 89,
+          "regla": "VD-FZ-03",
+          "razonamiento": "SI aporte ES limítrofe Y exposición NO ES buena ENTONCES riesgo ES moderado · α = 0.967",
+          "efecto": "ACTIVACION_DIFUSA",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P03-VD",
+          "orden": 89,
+          "regla": "VD-FZ-04",
+          "razonamiento": "SI aporte ES adecuada O (aporte NO ES baja Y exposición ES buena) ENTONCES riesgo ES bajo · α = 0.206",
+          "efecto": "ACTIVACION_DIFUSA",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P03-VD",
+          "orden": 90,
+          "regla": "VD-FZ-05",
+          "razonamiento": "Riesgo difuso 49.1 → MODERADO (provisional: parámetros CANDIDATOS)",
+          "efecto": "PENDIENTE",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [
+            "PI3_BATALLER"
+          ],
+          "preguntas_experta": [
+            "Q26"
+          ]
+        },
+        {
+          "evaluacion": "P03-VD",
+          "orden": 95,
+          "regla": "META-07",
+          "razonamiento": "Datos completos pero la conclusión depende de un criterio CANDIDATO: PENDIENTE_VALIDACION (no se culpa al paciente con «información insuficiente»)",
+          "efecto": "ESTADO",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [],
+          "preguntas_experta": []
+        }
+      ],
+      "difuso": {
+        "indice": 49.12,
+        "etiqueta": "MODERADO",
+        "prioridad_ca": null,
+        "activaciones": [
+          {
+            "id": "VD-FZ-03",
+            "alfa": 0.9665730326657813
+          },
+          {
+            "id": "VD-FZ-02",
+            "alfa": 0.21454344066899816
+          },
+          {
+            "id": "VD-FZ-04",
+            "alfa": 0.20623564508663372
+          },
+          {
+            "id": "VD-FZ-01",
+            "alfa": 0.03716538431601431
+          }
+        ]
+      },
+      "contexto_PI4": {
+        "estado": null,
+        "condiciones_derivacion": [],
+        "fuente_verificada": "NO",
+        "riesgo_difuso": 49.12,
+        "tipo_fuente_verificada": null,
+        "componente_limitante": "EXPOSICION",
+        "exposicion": {
+          "mes_consulta": 1,
+          "indice_E": 26.786,
+          "estado": null,
+          "horario": "DENTRO_UVB",
+          "horas_semana": 5.0,
+          "fototipo": "III",
+          "indice_uv_mes": null,
+          "protector": "A_VECES",
+          "vestimenta": "MEDIA"
+        },
+        "paciente": "P03",
+        "etiqueta_exposicion": "moderada",
+        "aporte_oral": {
+          "unidad": "µg/día",
+          "ingesta_dietaria": 1.9714285714285715,
+          "aporte_suplementos": 10.0,
+          "ingesta_estimada": 11.971,
+          "aporte_relativo": null,
+          "valor_referencia": 15
+        },
+        "traza": [
+          {
+            "texto": "Suplemento compartido CA/VD: aporta 10.0 µg de Vitamina D",
+            "evidencia": [
+              "Calcio + vitamina D"
+            ],
+            "respaldo_experta": null,
+            "estado_propuesto": null,
+            "efecto": "DATO_COMPARTIDO",
+            "regla": "CA-06"
+          },
+          {
+            "texto": "SI aporte ES baja Y exposición ES escasa ENTONCES riesgo ES alto · α = 0.037",
+            "evidencia": [],
+            "respaldo_experta": null,
+            "estado_propuesto": null,
+            "efecto": "ACTIVACION_DIFUSA",
+            "regla": "VD-FZ-01"
+          },
+          {
+            "texto": "SI aporte ES baja Y exposición NO ES escasa ENTONCES riesgo ES moderado · α = 0.215",
+            "evidencia": [],
+            "respaldo_experta": null,
+            "estado_propuesto": null,
+            "efecto": "ACTIVACION_DIFUSA",
+            "regla": "VD-FZ-02"
+          },
+          {
+            "texto": "SI aporte ES limítrofe Y exposición NO ES buena ENTONCES riesgo ES moderado · α = 0.967",
+            "evidencia": [],
+            "respaldo_experta": null,
+            "estado_propuesto": null,
+            "efecto": "ACTIVACION_DIFUSA",
+            "regla": "VD-FZ-03"
+          },
+          {
+            "texto": "SI aporte ES adecuada O (aporte NO ES baja Y exposición ES buena) ENTONCES riesgo ES bajo · α = 0.206",
+            "evidencia": [],
+            "respaldo_experta": null,
+            "estado_propuesto": null,
+            "efecto": "ACTIVACION_DIFUSA",
+            "regla": "VD-FZ-04"
+          },
+          {
+            "texto": "Riesgo difuso 49.1 → MODERADO (provisional: parámetros CANDIDATOS)",
+            "evidencia": [],
+            "respaldo_experta": null,
+            "estado_propuesto": null,
+            "efecto": "PENDIENTE",
+            "regla": "VD-FZ-05"
+          },
+          {
+            "texto": "Datos completos pero la conclusión depende de un criterio CANDIDATO: PENDIENTE_VALIDACION (no se culpa al paciente con «información insuficiente»)",
+            "evidencia": [],
+            "respaldo_experta": null,
+            "estado_propuesto": null,
+            "efecto": "ESTADO",
+            "regla": "META-07"
+          }
+        ],
+        "patron": "OMNIVORO",
+        "resultado_provisional": true,
+        "criterios_no_validados_usados": [
+          "PARAM_FZ_VD (CANDIDATO)",
+          "PARAM_INDICE_UVB_VD (CANDIDATO)",
+          "POLITICA_CORTES_SALIDA (CANDIDATO)",
+          "POLITICA_ZONA_MODERADA (CANDIDATO)"
+        ],
+        "pertenencias": [
+          "aporte_oral_relativo_vd ES baja (μ = 0.21454344066899816)",
+          "aporte_oral_relativo_vd ES limitrofe (μ = 0.9997496154946299)",
+          "aporte_oral_relativo_vd ES adecuada (μ = 0.20623564508663372)",
+          "exposicion_uvb_efectiva ES escasa (μ = 0.03716538431601431)",
+          "exposicion_uvb_efectiva ES moderada (μ = 0.9686793165448796)",
+          "exposicion_uvb_efectiva ES buena (μ = 0.03342696733421871)"
+        ],
+        "etiqueta_riesgo": "MODERADO",
+        "situacion_interna": "PENDIENTE_VALIDACION",
+        "edad": 55,
+        "etiqueta_aporte": "limitrofe",
+        "riesgo_invierno": 50.08,
+        "advertencias": [],
+        "regla_estado": "META-07",
+        "datos_faltantes": [],
+        "nutriente": "Vitamina D",
+        "etiqueta_invierno": null,
+        "se_deriva_a": []
+      },
+      "admision_PI4": {
+        "accion": "NINGUNA",
+        "motivo": null,
+        "veredicto": "ADMISIBLE",
+        "tope_aplicado": "NINGUNO",
+        "indice_calidad": 79.31,
+        "dias_registro": 7.0,
+        "nombre_caso": "Omnívora de 55 años con omeprazol y suplemento de calcio + D (caso B / integrado 3)",
+        "incluye_habil": true,
+        "trazas": [
+          {
+            "texto": "D1 a D4 superados: se habilitan CA, FE, B12 y VD",
+            "valor": "ADMISIBLE",
+            "orden": 40,
+            "efecto": "VEREDICTO",
+            "regla": "ADM-05"
+          },
+          {
+            "texto": "SI días ES amplia Y comidas ES completa ENTONCES calidad ES alta · α = 1.0",
+            "valor": null,
+            "orden": 44,
+            "efecto": "ACTIVACION_DIFUSA",
+            "regla": "ADM-F01"
+          },
+          {
+            "texto": "SI días ES amplia Y comidas ES parcial ENTONCES calidad ES media · α = 0.044",
+            "valor": null,
+            "orden": 44,
+            "efecto": "ACTIVACION_DIFUSA",
+            "regla": "ADM-F03"
+          },
+          {
+            "texto": "Índice de calidad 79.3 (dominante: alta); calidad informada: ALTA",
+            "valor": "ALTA",
+            "orden": 45,
+            "efecto": "CALIDAD",
+            "regla": "ADM-F07"
+          }
+        ],
+        "incluye_finde": true,
+        "paciente": "P03",
+        "etiqueta_difusa": "alta",
+        "datos_faltantes": [],
+        "comidas_principales": 4.0,
+        "calidad_registro": "ALTA"
+      }
+    }
+  },
+  "fundamentos_seleccionados": [
+    "VD · CA-06 · Suplemento compartido CA/VD: aporta 10.0 µg de Vitamina D",
+    "VD · VD-FZ-01 · SI aporte ES baja Y exposición ES escasa ENTONCES riesgo ES alto · α = 0.037",
+    "VD · VD-FZ-02 · SI aporte ES baja Y exposición NO ES escasa ENTONCES riesgo ES moderado · α = 0.215"
+  ],
+  "respuesta": "P03 · Admisibilidad: ADMISIBLE\nB12: sin señal detectada. FUENTE_VERIFICADA\nEdad 55 años con B12 solo de alimentos: la absorción puede ser menor\nUso de Inhibidores de la bomba de protones (omeprazol) hace 60 meses: puede reducir la absorción de Vitamina B12; sugerir consulta médica\nVD: pendiente validacion. CRITERIO_PENDIENTE\nÍndice difuso: 49.12 (valor auxiliar sujeto a revisión profesional).\nVD · CA-06 · Suplemento compartido CA/VD: aporta 10.0 µg de Vitamina D\nVD · VD-FZ-01 · SI aporte ES baja Y exposición ES escasa ENTONCES riesgo ES alto · α = 0.037\nVD · VD-FZ-02 · SI aporte ES baja Y exposición NO ES escasa ENTONCES riesgo ES moderado · α = 0.215"
+}

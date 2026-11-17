@@ -1,0 +1,19 @@
+id,nombre,grupo,origen,porcion,fortificado,factor
+carne_vacuna,Carne vacuna,CARNES,ANIMAL,100 g,NO,
+pollo,Pollo,CARNES,ANIMAL,100 g,NO,
+pescado_graso,Pescado graso (salmón / caballa),PESCADOS,ANIMAL,100 g,NO,
+huevo,Huevo,HUEVOS,ANIMAL,1 unidad (50 g),NO,
+leche_vaca,Leche de vaca,LACTEOS,ANIMAL,250 ml,NO,
+leche_fortificada_d,Leche fortificada con vitamina D,LACTEOS,ANIMAL,250 ml,SI,
+yogur,Yogur,LACTEOS,ANIMAL,200 g,NO,
+queso,Queso,LACTEOS,ANIMAL,30 g,NO,
+lentejas,Lentejas cocidas,LEGUMBRES,VEGETAL,100 g,NO,
+garbanzos,Garbanzos cocidos,LEGUMBRES,VEGETAL,100 g,NO,
+espinaca,Espinaca cocida,HOJAS_VERDES,VEGETAL,100 g,NO,
+naranja,Naranja / cítricos,FRUTAS,VEGETAL,1 unidad,NO,VITAMINA_C
+mate,Mate,INFUSIONES,VEGETAL,1 toma,NO,POLIFENOLES
+te,Té,INFUSIONES,VEGETAL,1 taza,NO,POLIFENOLES
+cafe,Café,INFUSIONES,VEGETAL,1 taza,NO,POLIFENOLES
+bebida_almendras_desc,Bebida de almendras (marca desconocida),BEBIDAS_VEGETALES,VEGETAL,200 ml,SI,
+bebida_soja_fort,Bebida de soja fortificada (rótulo verificado),BEBIDAS_VEGETALES,VEGETAL,200 ml,SI,
+pan,Pan / harinas,CEREALES,VEGETAL,50 g,NO,

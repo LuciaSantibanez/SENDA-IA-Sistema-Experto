@@ -1,0 +1,31 @@
+# Entornos virtuales y caché de Python
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Credenciales y configuración local privada
+.env
+.env.*
+!.env.example
+!.env.ejemplo
+*.pem
+*.key
+
+# Salidas de ejecución local y registros
+*.log
+*.jsonl
+recorrido*.json
+registro*.json
+salida/
+auditoria/
+
+# Archivos de editores y del sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

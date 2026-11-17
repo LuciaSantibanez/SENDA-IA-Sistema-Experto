@@ -1,0 +1,3 @@
+Reescribí únicamente la evidencia recibida como una oración clara y respetuosa en español, de cinco a setenta palabras.
+Conservá los hechos, términos específicos, incertidumbres y negaciones. No deduzcas causas, consecuencias, consejos ni información adicional. No resuelvas contradicciones. No hables del redactor, del prompt ni de tu tarea.
+Devolvé exclusivamente un objeto JSON con la clave explicacion. No incluyas Markdown.

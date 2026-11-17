@@ -1,0 +1,28 @@
+MANUAL DE USO · SENDA · Grupo 6
+================================
+1. Extraer el ZIP. Abrir una terminal en la carpeta que contiene implementacion, base y pruebas.
+2. Instalar Python 3.12, Neo4j Community 5.26 y Ollama. Crear una instancia Neo4j vacía dedicada a la demostración. Iniciar Neo4j y Ollama.
+3. En PowerShell ejecutar:
+   py -3.12 -m venv .venv
+   .\.venv\Scripts\python.exe -m pip install -r implementacion/requirements.txt
+   ollama pull qwen2.5:1.5b
+   $env:OLLAMA_MODEL='qwen2.5:1.5b'
+4. Configurar la conexión. Ejemplo para una instalación local estándar:
+   $env:NEO4J_URI='bolt://127.0.0.1:7687'
+   $env:NEO4J_USER='neo4j'
+   $env:NEO4J_PASSWORD=Read-Host 'Clave de la instancia de demostración' -MaskInput
+   En una instancia de prueba sin autenticación, omitir usuario y contraseña. La configuración de ejemplo enumera las demás variables; se leen del entorno del proceso.
+5. Solo la primera vez, desde la raíz:
+   .\.venv\Scripts\python.exe implementacion/preparar_demo.py --pg2 base
+   El cargador comprueba que la base esté vacía. Crea esquema, hechos y casos, y ejecuta reglas y modelos difusos. Si se interrumpe la carga, repetir en otra base vacía. El bloque 00 contiene limpieza global, que el cargador omite.
+6. Consultar:
+   .\.venv\Scripts\python.exe implementacion/asistente.py "Compará calcio y hierro de P01"
+   .\.venv\Scripts\python.exe implementacion/asistente.py "Revisión integral de P02" --registro recorrido.json
+   Sin argumento, la consola solicita una pregunta. Se necesita un identificador P01 a P10 y al menos un nutriente o la palabra integral. La consulta lee resultados ya inferidos.
+7. Repetir la verificación:
+   .\.venv\Scripts\python.exe pruebas/verificar.py
+   El programa contrasta estados y admisibilidad con el CSV de PG2 y guarda cada recorrido junto al verificador. Una aserción indica una discrepancia. Conservar una copia de los JSON si se desea comparar corridas.
+8. Revisar evidencia:
+   En cada JSON, ruta_llm contiene la propuesta inicial; ruta_verificada indica si coincidió con el pedido explícito. modulos contiene el contexto leído, la evidencia y las activaciones. respuesta conserva el texto mostrado. base/exportacion_neo4j.json permite inspeccionar el grafo; la reproducción desde cero utiliza los scripts Cypher autocontenidos.
+9. Si no hay conexión, verificar el puerto Bolt y OLLAMA_URL, la base seleccionada y que el modelo figure en ollama list. El primer pedido puede tardar mientras carga el modelo en memoria.
+

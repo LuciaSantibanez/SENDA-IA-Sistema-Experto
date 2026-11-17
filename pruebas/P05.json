@@ -1,0 +1,676 @@
+{
+  "pregunta": "Explicá la vitamina D y el calcio de P05",
+  "modelo": "qwen2.5:1.5b",
+  "ruta_llm": {
+    "paciente": "P05",
+    "modulos": [
+      "VD",
+      "CA"
+    ]
+  },
+  "ruta_verificada": true,
+  "paciente": "P05",
+  "modulos": {
+    "VD": {
+      "resumen": {
+        "accion_admisibilidad": "NINGUNA",
+        "estado_concluido": null,
+        "estado": "PENDIENTE_VALIDACION",
+        "resultado_provisional": true,
+        "ingesta_alcance": "TOTAL_REGISTRO",
+        "situacion_interna": "PENDIENTE_VALIDACION",
+        "traza_admisibilidad": [
+          {
+            "texto": "D1 a D4 superados: se habilitan CA, FE, B12 y VD",
+            "regla": "ADM-05",
+            "efecto": "VEREDICTO"
+          },
+          {
+            "texto": "SI días ES amplia Y comidas ES completa ENTONCES calidad ES alta · α = 1.0",
+            "regla": "ADM-F01",
+            "efecto": "ACTIVACION_DIFUSA"
+          },
+          {
+            "texto": "SI días ES amplia Y comidas ES parcial ENTONCES calidad ES media · α = 0.044",
+            "regla": "ADM-F03",
+            "efecto": "ACTIVACION_DIFUSA"
+          },
+          {
+            "texto": "Índice de calidad 79.3 (dominante: alta); calidad informada: ALTA",
+            "regla": "ADM-F07",
+            "efecto": "CALIDAD"
+          }
+        ],
+        "etiqueta_prioridad": null,
+        "ingesta_relativa": 20.0,
+        "unidad": "µg",
+        "ingesta_estimada": 3.0,
+        "paciente": "P05",
+        "prioridad_revision_ca": null,
+        "capa_difusa_estado": "EJECUTADA",
+        "fundamento": "CRITERIO_PENDIENTE",
+        "advertencias": [
+          {
+            "regla": "VD-FZ-06",
+            "texto": "Con el mismo hábito, en invierno el riesgo de vitamina D sería ALTO (83.09): reevaluar entre junio y agosto. No se recomienda más sol ni retirar el protector"
+          }
+        ],
+        "datos_faltantes": [],
+        "admisibilidad": "ADMISIBLE",
+        "traza": [
+          {
+            "texto": "SI aporte ES baja Y exposición ES escasa ENTONCES riesgo ES alto · α = 0.677",
+            "estado_propuesto": null,
+            "regla": "VD-FZ-01",
+            "efecto": "ACTIVACION_DIFUSA"
+          },
+          {
+            "texto": "SI aporte ES baja Y exposición NO ES escasa ENTONCES riesgo ES moderado · α = 0.323",
+            "estado_propuesto": null,
+            "regla": "VD-FZ-02",
+            "efecto": "ACTIVACION_DIFUSA"
+          },
+          {
+            "texto": "Riesgo difuso 61.8 → MODERADO (provisional: parámetros CANDIDATOS)",
+            "estado_propuesto": null,
+            "regla": "VD-FZ-05",
+            "efecto": "PENDIENTE"
+          },
+          {
+            "texto": "Proyección invernal ALTA",
+            "estado_propuesto": null,
+            "regla": "VD-FZ-06",
+            "efecto": "ADVERTENCIA"
+          },
+          {
+            "texto": "Datos completos pero la conclusión depende de un criterio CANDIDATO: PENDIENTE_VALIDACION (no se culpa al paciente con «información insuficiente»)",
+            "estado_propuesto": null,
+            "regla": "META-07",
+            "efecto": "ESTADO"
+          }
+        ],
+        "nutriente": "VD",
+        "referencia": 15
+      },
+      "traza": [
+        {
+          "evaluacion": "P05-ADM",
+          "orden": 40,
+          "regla": "ADM-05",
+          "razonamiento": "D1 a D4 superados: se habilitan CA, FE, B12 y VD",
+          "efecto": "VEREDICTO",
+          "estado_propuesto": null,
+          "evidencias": [
+            {
+              "valor": null,
+              "relato": null,
+              "atributo": null,
+              "id": "P05",
+              "nombre": null
+            }
+          ],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P05-ADM",
+          "orden": 44,
+          "regla": "ADM-F01",
+          "razonamiento": "SI días ES amplia Y comidas ES completa ENTONCES calidad ES alta · α = 1.0",
+          "efecto": "ACTIVACION_DIFUSA",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P05-ADM",
+          "orden": 44,
+          "regla": "ADM-F03",
+          "razonamiento": "SI días ES amplia Y comidas ES parcial ENTONCES calidad ES media · α = 0.044",
+          "efecto": "ACTIVACION_DIFUSA",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P05-ADM",
+          "orden": 45,
+          "regla": "ADM-F07",
+          "razonamiento": "Índice de calidad 79.3 (dominante: alta); calidad informada: ALTA",
+          "efecto": "CALIDAD",
+          "estado_propuesto": null,
+          "evidencias": [
+            {
+              "valor": null,
+              "relato": null,
+              "atributo": null,
+              "id": "P05-REG",
+              "nombre": null
+            }
+          ],
+          "fuentes": [
+            "PI3_ZALAZAR"
+          ],
+          "preguntas_experta": [
+            "Q1"
+          ]
+        },
+        {
+          "evaluacion": "P05-VD",
+          "orden": 89,
+          "regla": "VD-FZ-01",
+          "razonamiento": "SI aporte ES baja Y exposición ES escasa ENTONCES riesgo ES alto · α = 0.677",
+          "efecto": "ACTIVACION_DIFUSA",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P05-VD",
+          "orden": 89,
+          "regla": "VD-FZ-02",
+          "razonamiento": "SI aporte ES baja Y exposición NO ES escasa ENTONCES riesgo ES moderado · α = 0.323",
+          "efecto": "ACTIVACION_DIFUSA",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P05-VD",
+          "orden": 90,
+          "regla": "VD-FZ-05",
+          "razonamiento": "Riesgo difuso 61.8 → MODERADO (provisional: parámetros CANDIDATOS)",
+          "efecto": "PENDIENTE",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [
+            "PI3_BATALLER"
+          ],
+          "preguntas_experta": [
+            "Q26"
+          ]
+        },
+        {
+          "evaluacion": "P05-VD",
+          "orden": 91,
+          "regla": "VD-FZ-06",
+          "razonamiento": "Proyección invernal ALTA",
+          "efecto": "ADVERTENCIA",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [
+            "PI3_BATALLER"
+          ],
+          "preguntas_experta": [
+            "Q25"
+          ]
+        },
+        {
+          "evaluacion": "P05-VD",
+          "orden": 95,
+          "regla": "META-07",
+          "razonamiento": "Datos completos pero la conclusión depende de un criterio CANDIDATO: PENDIENTE_VALIDACION (no se culpa al paciente con «información insuficiente»)",
+          "efecto": "ESTADO",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [],
+          "preguntas_experta": []
+        }
+      ],
+      "difuso": {
+        "indice": 61.8,
+        "etiqueta": "MODERADO",
+        "prioridad_ca": null,
+        "activaciones": [
+          {
+            "id": "VD-FZ-04",
+            "alfa": 8.066771903401427e-07
+          },
+          {
+            "id": "VD-FZ-02",
+            "alfa": 0.3230723718589035
+          },
+          {
+            "id": "VD-FZ-01",
+            "alfa": 0.6769276281410965
+          },
+          {
+            "id": "VD-FZ-03",
+            "alfa": 1.4279182521887226e-11
+          }
+        ]
+      },
+      "contexto_PI4": {
+        "estado": null,
+        "condiciones_derivacion": [],
+        "fuente_verificada": "NO",
+        "riesgo_difuso": 61.8,
+        "tipo_fuente_verificada": null,
+        "componente_limitante": "AMBOS",
+        "exposicion": {
+          "mes_consulta": 1,
+          "indice_E": 12.5,
+          "estado": null,
+          "horario": "DENTRO_UVB",
+          "horas_semana": 30.0,
+          "fototipo": "III",
+          "indice_uv_mes": null,
+          "protector": "SIEMPRE",
+          "vestimenta": "ALTA"
+        },
+        "paciente": "P05",
+        "etiqueta_exposicion": "escasa",
+        "aporte_oral": {
+          "unidad": "µg/día",
+          "ingesta_dietaria": 3.0,
+          "aporte_suplementos": 0.0,
+          "ingesta_estimada": 3.0,
+          "aporte_relativo": null,
+          "valor_referencia": 15
+        },
+        "traza": [
+          {
+            "texto": "SI aporte ES baja Y exposición ES escasa ENTONCES riesgo ES alto · α = 0.677",
+            "evidencia": [],
+            "respaldo_experta": null,
+            "estado_propuesto": null,
+            "efecto": "ACTIVACION_DIFUSA",
+            "regla": "VD-FZ-01"
+          },
+          {
+            "texto": "SI aporte ES baja Y exposición NO ES escasa ENTONCES riesgo ES moderado · α = 0.323",
+            "evidencia": [],
+            "respaldo_experta": null,
+            "estado_propuesto": null,
+            "efecto": "ACTIVACION_DIFUSA",
+            "regla": "VD-FZ-02"
+          },
+          {
+            "texto": "Riesgo difuso 61.8 → MODERADO (provisional: parámetros CANDIDATOS)",
+            "evidencia": [],
+            "respaldo_experta": null,
+            "estado_propuesto": null,
+            "efecto": "PENDIENTE",
+            "regla": "VD-FZ-05"
+          },
+          {
+            "texto": "Proyección invernal ALTA",
+            "evidencia": [],
+            "respaldo_experta": null,
+            "estado_propuesto": null,
+            "efecto": "ADVERTENCIA",
+            "regla": "VD-FZ-06"
+          },
+          {
+            "texto": "Datos completos pero la conclusión depende de un criterio CANDIDATO: PENDIENTE_VALIDACION (no se culpa al paciente con «información insuficiente»)",
+            "evidencia": [],
+            "respaldo_experta": null,
+            "estado_propuesto": null,
+            "efecto": "ESTADO",
+            "regla": "META-07"
+          }
+        ],
+        "patron": "OMNIVORO",
+        "resultado_provisional": true,
+        "criterios_no_validados_usados": [
+          "PARAM_FZ_VD (CANDIDATO)",
+          "PARAM_INDICE_UVB_VD (CANDIDATO)",
+          "POLITICA_CORTES_SALIDA (CANDIDATO)",
+          "POLITICA_ZONA_MODERADA (CANDIDATO)"
+        ],
+        "pertenencias": [
+          "aporte_oral_relativo_vd ES baja (μ = 1.0)",
+          "aporte_oral_relativo_vd ES limitrofe (μ = 1.4279182521887226E-11)",
+          "aporte_oral_relativo_vd ES adecuada (μ = 8.066771903401427E-7)",
+          "exposicion_uvb_efectiva ES escasa (μ = 0.6769276281410965)",
+          "exposicion_uvb_efectiva ES moderada (μ = 0.3892923375632209)",
+          "exposicion_uvb_efectiva ES buena (μ = 9.581203819163063E-4)"
+        ],
+        "etiqueta_riesgo": "MODERADO",
+        "situacion_interna": "PENDIENTE_VALIDACION",
+        "edad": 25,
+        "etiqueta_aporte": "baja",
+        "riesgo_invierno": 83.09,
+        "advertencias": [
+          "VD-FZ-06: Con el mismo hábito, en invierno el riesgo de vitamina D sería ALTO (83.09): reevaluar entre junio y agosto. No se recomienda más sol ni retirar el protector"
+        ],
+        "regla_estado": "META-07",
+        "datos_faltantes": [],
+        "nutriente": "Vitamina D",
+        "etiqueta_invierno": null,
+        "se_deriva_a": []
+      },
+      "admision_PI4": {
+        "accion": "NINGUNA",
+        "motivo": null,
+        "veredicto": "ADMISIBLE",
+        "tope_aplicado": "NINGUNO",
+        "indice_calidad": 79.31,
+        "dias_registro": 7.0,
+        "nombre_caso": "Trabaja al aire libre con ropa larga y protector (caso D, datos completados)",
+        "incluye_habil": true,
+        "trazas": [
+          {
+            "texto": "D1 a D4 superados: se habilitan CA, FE, B12 y VD",
+            "valor": "ADMISIBLE",
+            "orden": 40,
+            "efecto": "VEREDICTO",
+            "regla": "ADM-05"
+          },
+          {
+            "texto": "SI días ES amplia Y comidas ES completa ENTONCES calidad ES alta · α = 1.0",
+            "valor": null,
+            "orden": 44,
+            "efecto": "ACTIVACION_DIFUSA",
+            "regla": "ADM-F01"
+          },
+          {
+            "texto": "SI días ES amplia Y comidas ES parcial ENTONCES calidad ES media · α = 0.044",
+            "valor": null,
+            "orden": 44,
+            "efecto": "ACTIVACION_DIFUSA",
+            "regla": "ADM-F03"
+          },
+          {
+            "texto": "Índice de calidad 79.3 (dominante: alta); calidad informada: ALTA",
+            "valor": "ALTA",
+            "orden": 45,
+            "efecto": "CALIDAD",
+            "regla": "ADM-F07"
+          }
+        ],
+        "incluye_finde": true,
+        "paciente": "P05",
+        "etiqueta_difusa": "alta",
+        "datos_faltantes": [],
+        "comidas_principales": 4.0,
+        "calidad_registro": "ALTA"
+      }
+    },
+    "CA": {
+      "resumen": {
+        "accion_admisibilidad": "NINGUNA",
+        "estado_concluido": null,
+        "estado": "PENDIENTE_VALIDACION",
+        "resultado_provisional": true,
+        "ingesta_alcance": "TOTAL_REGISTRO",
+        "situacion_interna": "PENDIENTE_VALIDACION",
+        "traza_admisibilidad": [
+          {
+            "texto": "D1 a D4 superados: se habilitan CA, FE, B12 y VD",
+            "regla": "ADM-05",
+            "efecto": "VEREDICTO"
+          },
+          {
+            "texto": "SI días ES amplia Y comidas ES completa ENTONCES calidad ES alta · α = 1.0",
+            "regla": "ADM-F01",
+            "efecto": "ACTIVACION_DIFUSA"
+          },
+          {
+            "texto": "SI días ES amplia Y comidas ES parcial ENTONCES calidad ES media · α = 0.044",
+            "regla": "ADM-F03",
+            "efecto": "ACTIVACION_DIFUSA"
+          },
+          {
+            "texto": "Índice de calidad 79.3 (dominante: alta); calidad informada: ALTA",
+            "regla": "ADM-F07",
+            "efecto": "CALIDAD"
+          }
+        ],
+        "etiqueta_prioridad": "ALTA",
+        "ingesta_relativa": 60.0,
+        "unidad": "mg",
+        "ingesta_estimada": 600.0,
+        "paciente": "P05",
+        "prioridad_revision_ca": 77.3,
+        "capa_difusa_estado": "EJECUTADA",
+        "fundamento": "CRITERIO_PENDIENTE",
+        "advertencias": [],
+        "datos_faltantes": [],
+        "admisibilidad": "ADMISIBLE",
+        "traza": [
+          {
+            "texto": "Ingesta 60.0 % de la referencia; umbral 70 % en estado CANDIDATO",
+            "estado_propuesto": null,
+            "regla": "G-07",
+            "efecto": "PENDIENTE"
+          },
+          {
+            "texto": "SI ingesta ES baja O variabilidad ES alta ENTONCES prioridad ES alta · α = 0.926",
+            "estado_propuesto": null,
+            "regla": "CA-D01",
+            "efecto": "ACTIVACION_DIFUSA"
+          },
+          {
+            "texto": "SI ingesta ES limítrofe Y (variabilidad ES baja O intermedia) ENTONCES prioridad ES media · α = 0.062",
+            "estado_propuesto": null,
+            "regla": "CA-D02",
+            "efecto": "ACTIVACION_DIFUSA"
+          },
+          {
+            "texto": "Prioridad auxiliar de revisión de calcio 77.3 (ALTA)",
+            "estado_propuesto": null,
+            "regla": "CA-D05",
+            "efecto": "INFORMATIVO"
+          },
+          {
+            "texto": "Datos completos pero la conclusión depende de un criterio CANDIDATO: PENDIENTE_VALIDACION (no se culpa al paciente con «información insuficiente»)",
+            "estado_propuesto": null,
+            "regla": "META-07",
+            "efecto": "ESTADO"
+          }
+        ],
+        "nutriente": "CA",
+        "referencia": 1000
+      },
+      "traza": [
+        {
+          "evaluacion": "P05-ADM",
+          "orden": 40,
+          "regla": "ADM-05",
+          "razonamiento": "D1 a D4 superados: se habilitan CA, FE, B12 y VD",
+          "efecto": "VEREDICTO",
+          "estado_propuesto": null,
+          "evidencias": [
+            {
+              "valor": null,
+              "relato": null,
+              "atributo": null,
+              "id": "P05",
+              "nombre": null
+            }
+          ],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P05-ADM",
+          "orden": 44,
+          "regla": "ADM-F01",
+          "razonamiento": "SI días ES amplia Y comidas ES completa ENTONCES calidad ES alta · α = 1.0",
+          "efecto": "ACTIVACION_DIFUSA",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P05-ADM",
+          "orden": 44,
+          "regla": "ADM-F03",
+          "razonamiento": "SI días ES amplia Y comidas ES parcial ENTONCES calidad ES media · α = 0.044",
+          "efecto": "ACTIVACION_DIFUSA",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P05-ADM",
+          "orden": 45,
+          "regla": "ADM-F07",
+          "razonamiento": "Índice de calidad 79.3 (dominante: alta); calidad informada: ALTA",
+          "efecto": "CALIDAD",
+          "estado_propuesto": null,
+          "evidencias": [
+            {
+              "valor": null,
+              "relato": null,
+              "atributo": null,
+              "id": "P05-REG",
+              "nombre": null
+            }
+          ],
+          "fuentes": [
+            "PI3_ZALAZAR"
+          ],
+          "preguntas_experta": [
+            "Q1"
+          ]
+        },
+        {
+          "evaluacion": "P05-CA",
+          "orden": 85,
+          "regla": "G-07",
+          "razonamiento": "Ingesta 60.0 % de la referencia; umbral 70 % en estado CANDIDATO",
+          "efecto": "PENDIENTE",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [
+            "CUESTIONARIO",
+            "PG1"
+          ],
+          "preguntas_experta": [
+            "Q8",
+            "Q9"
+          ]
+        },
+        {
+          "evaluacion": "P05-CA",
+          "orden": 89,
+          "regla": "CA-D01",
+          "razonamiento": "SI ingesta ES baja O variabilidad ES alta ENTONCES prioridad ES alta · α = 0.926",
+          "efecto": "ACTIVACION_DIFUSA",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P05-CA",
+          "orden": 89,
+          "regla": "CA-D02",
+          "razonamiento": "SI ingesta ES limítrofe Y (variabilidad ES baja O intermedia) ENTONCES prioridad ES media · α = 0.062",
+          "efecto": "ACTIVACION_DIFUSA",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P05-CA",
+          "orden": 90,
+          "regla": "CA-D05",
+          "razonamiento": "Prioridad auxiliar de revisión de calcio 77.3 (ALTA)",
+          "efecto": "INFORMATIVO",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [
+            "PI3_RAMIREZ"
+          ],
+          "preguntas_experta": []
+        },
+        {
+          "evaluacion": "P05-CA",
+          "orden": 95,
+          "regla": "META-07",
+          "razonamiento": "Datos completos pero la conclusión depende de un criterio CANDIDATO: PENDIENTE_VALIDACION (no se culpa al paciente con «información insuficiente»)",
+          "efecto": "ESTADO",
+          "estado_propuesto": null,
+          "evidencias": [],
+          "fuentes": [],
+          "preguntas_experta": []
+        }
+      ],
+      "difuso": {
+        "indice": null,
+        "etiqueta": null,
+        "prioridad_ca": 77.3,
+        "activaciones": [
+          {
+            "id": "CA-D03",
+            "alfa": 0.0019534559235505206
+          },
+          {
+            "id": "CA-D02",
+            "alfa": 0.06236874976412607
+          },
+          {
+            "id": "CA-D01",
+            "alfa": 0.9258766488363559
+          },
+          {
+            "id": "CA-D04",
+            "alfa": 0.0019534559235505206
+          }
+        ]
+      },
+      "admision_PI4": {
+        "accion": "NINGUNA",
+        "motivo": null,
+        "veredicto": "ADMISIBLE",
+        "tope_aplicado": "NINGUNO",
+        "indice_calidad": 79.31,
+        "dias_registro": 7.0,
+        "nombre_caso": "Trabaja al aire libre con ropa larga y protector (caso D, datos completados)",
+        "incluye_habil": true,
+        "trazas": [
+          {
+            "texto": "D1 a D4 superados: se habilitan CA, FE, B12 y VD",
+            "valor": "ADMISIBLE",
+            "orden": 40,
+            "efecto": "VEREDICTO",
+            "regla": "ADM-05"
+          },
+          {
+            "texto": "SI días ES amplia Y comidas ES completa ENTONCES calidad ES alta · α = 1.0",
+            "valor": null,
+            "orden": 44,
+            "efecto": "ACTIVACION_DIFUSA",
+            "regla": "ADM-F01"
+          },
+          {
+            "texto": "SI días ES amplia Y comidas ES parcial ENTONCES calidad ES media · α = 0.044",
+            "valor": null,
+            "orden": 44,
+            "efecto": "ACTIVACION_DIFUSA",
+            "regla": "ADM-F03"
+          },
+          {
+            "texto": "Índice de calidad 79.3 (dominante: alta); calidad informada: ALTA",
+            "valor": "ALTA",
+            "orden": 45,
+            "efecto": "CALIDAD",
+            "regla": "ADM-F07"
+          }
+        ],
+        "incluye_finde": true,
+        "paciente": "P05",
+        "etiqueta_difusa": "alta",
+        "datos_faltantes": [],
+        "comidas_principales": 4.0,
+        "calidad_registro": "ALTA"
+      }
+    }
+  },
+  "fundamentos_seleccionados": [
+    "VD · VD-FZ-05 · Riesgo difuso 61.8 → MODERADO (provisional: parámetros CANDIDATOS)",
+    "VD · VD-FZ-06 · Proyección invernal ALTA",
+    "VD · META-07 · Datos completos pero la conclusión depende de un criterio CANDIDATO: PENDIENTE_VALIDACION (no se culpa al paciente con «información insuficiente»)"
+  ],
+  "respuesta": "P05 · Admisibilidad: ADMISIBLE\nVD: pendiente validacion. CRITERIO_PENDIENTE\nÍndice difuso: 61.8 (valor auxiliar sujeto a revisión profesional).\nCon el mismo hábito, en invierno el riesgo de vitamina D sería ALTO (83.09): reevaluar entre junio y agosto. No se recomienda más sol ni retirar el protector\nCA: pendiente validacion. CRITERIO_PENDIENTE\nPrioridad auxiliar de revisión: 77.3 (valor auxiliar sujeto a revisión profesional).\nVD · VD-FZ-05 · Riesgo difuso 61.8 → MODERADO (provisional: parámetros CANDIDATOS)\nVD · VD-FZ-06 · Proyección invernal ALTA\nVD · META-07 · Datos completos pero la conclusión depende de un criterio CANDIDATO: PENDIENTE_VALIDACION (no se culpa al paciente con «información insuficiente»)"
+}

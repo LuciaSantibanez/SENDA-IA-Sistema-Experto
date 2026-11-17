@@ -1,0 +1,25 @@
+id,modelo,texto,antecedentes,consecuente,respaldo,relacion_crisp
+ADM-F01,MD-ADM,SI días ES amplia Y comidas ES completa ENTONCES calidad ES alta,1:T-ADM-DIAS-amplia|2:T-ADM-COM-completa,T-ADM-CAL-alta,Q1;Q2,ADM-06
+ADM-F02,MD-ADM,SI días ES parcial Y comidas ES completa ENTONCES calidad ES media,1:T-ADM-DIAS-parcial|2:T-ADM-COM-completa,T-ADM-CAL-media,Q3,ADM-06
+ADM-F03,MD-ADM,SI días ES amplia Y comidas ES parcial ENTONCES calidad ES media,1:T-ADM-DIAS-amplia|2:T-ADM-COM-parcial,T-ADM-CAL-media,Supuesto de diseño,ADM-06
+ADM-F04,MD-ADM,SI días ES escasa Y comidas ES completa ENTONCES calidad ES baja,1:T-ADM-DIAS-escasa|2:T-ADM-COM-completa,T-ADM-CAL-baja,Q3,ADM-06
+ADM-F05,MD-ADM,SI días ES parcial Y comidas ES parcial ENTONCES calidad ES media,1:T-ADM-DIAS-parcial|2:T-ADM-COM-parcial,T-ADM-CAL-media,Supuesto de diseño,ADM-06
+ADM-F06,MD-ADM,SI días ES escasa O comidas ES escasa ENTONCES calidad ES baja,1:T-ADM-DIAS-escasa|1:T-ADM-COM-escasa,T-ADM-CAL-baja,Piso de diseño,ADM-06
+CA-D01,MD-CA,SI ingesta ES baja O variabilidad ES alta ENTONCES prioridad ES alta,1:T-CA-ING-baja|1:T-CA-VAR-alta,T-CA-PRI-alta,Diseño (Ramirez),G-07
+CA-D02,MD-CA,SI ingesta ES limítrofe Y (variabilidad ES baja O intermedia) ENTONCES prioridad ES media,1:T-CA-ING-limitrofe|2:T-CA-VAR-baja|2:T-CA-VAR-intermedia,T-CA-PRI-media,Diseño (Ramirez),G-07
+CA-D03,MD-CA,SI ingesta ES adecuada Y variabilidad ES intermedia ENTONCES prioridad ES media,1:T-CA-ING-adecuada|2:T-CA-VAR-intermedia,T-CA-PRI-media,Diseño (Ramirez),G-07
+CA-D04,MD-CA,SI ingesta ES adecuada Y variabilidad ES baja ENTONCES prioridad ES baja,1:T-CA-ING-adecuada|2:T-CA-VAR-baja,T-CA-PRI-baja,Diseño (Ramirez),G-07
+FE-F01,MD-FE,SI consumo no hemo ES bajo Y inhibidores ES frecuente ENTONCES riesgo ES alto,1:T-FE-NOH-bajo|2:T-FE-INH-frecuente,T-RIESGO-alto,FE-03;FE-05,FE-03
+FE-F02,MD-FE,SI consumo no hemo ES bajo Y (inhibidores ES bajo O moderado) ENTONCES riesgo ES moderado,1:T-FE-NOH-bajo|2:T-FE-INH-bajo|2:T-FE-INH-moderado,T-RIESGO-moderado,Supuesto de diseño,FE-03
+FE-F03,MD-FE,SI consumo no hemo ES medio Y inhibidores ES frecuente ENTONCES riesgo ES moderado,1:T-FE-NOH-medio|2:T-FE-INH-frecuente,T-RIESGO-moderado,FE-05,FE-05
+FE-F04,MD-FE,SI consumo no hemo ES medio Y (inhibidores ES bajo O moderado) ENTONCES riesgo ES bajo,1:T-FE-NOH-medio|2:T-FE-INH-bajo|2:T-FE-INH-moderado,T-RIESGO-bajo,Supuesto de diseño,FE-07
+FE-F05,MD-FE,SI consumo no hemo ES alto Y (inhibidores ES bajo O moderado) ENTONCES riesgo ES bajo,1:T-FE-NOH-alto|2:T-FE-INH-bajo|2:T-FE-INH-moderado,T-RIESGO-bajo,FE-04;FE-07,FE-07
+FE-F06,MD-FE,SI consumo no hemo ES alto Y inhibidores ES frecuente ENTONCES riesgo ES moderado,1:T-FE-NOH-alto|2:T-FE-INH-frecuente,T-RIESGO-moderado,Hipótesis (P3c),FE-05
+B12-FZ-01,MD-B12,SI ingesta ES baja Y adherencia ES irregular ENTONCES riesgo ES alto,1:T-B12-ING-baja|2:T-B12-ADH-irregular,T-RIESGO-alto,R06;CASO_C,R06
+B12-FZ-02,MD-B12,SI ingesta ES baja Y adherencia ES intermedia ENTONCES riesgo ES moderado,1:T-B12-ING-baja|2:T-B12-ADH-intermedia,T-RIESGO-moderado,Q28 (P-F4 a validar),B12-07
+B12-FZ-03,MD-B12,SI ingesta ES limítrofe Y (adherencia ES irregular O intermedia) ENTONCES riesgo ES moderado,1:T-B12-ING-limitrofe|2:T-B12-ADH-irregular|2:T-B12-ADH-intermedia,T-RIESGO-moderado,Q9,G-07
+B12-FZ-04,MD-B12,SI ingesta ES adecuada O adherencia ES regular ENTONCES riesgo ES bajo,1:T-B12-ING-adecuada|1:T-B12-ADH-regular,T-RIESGO-bajo,G-14;B12-07,G-14
+VD-FZ-01,MD-VD,SI aporte ES baja Y exposición ES escasa ENTONCES riesgo ES alto,1:T-VD-APO-baja|2:T-VD-EXP-escasa,T-RIESGO-alto,Q9;R15,VD-13
+VD-FZ-02,MD-VD,SI aporte ES baja Y exposición NO ES escasa ENTONCES riesgo ES moderado,1:T-VD-APO-baja|2:T-VD-EXP-escasa:NOT,T-RIESGO-moderado,Q26,VD-14
+VD-FZ-03,MD-VD,SI aporte ES limítrofe Y exposición NO ES buena ENTONCES riesgo ES moderado,1:T-VD-APO-limitrofe|2:T-VD-EXP-buena:NOT,T-RIESGO-moderado,Q9,VD-13
+VD-FZ-04,MD-VD,SI aporte ES adecuada O (aporte NO ES baja Y exposición ES buena) ENTONCES riesgo ES bajo,1:T-VD-APO-adecuada|1:T-VD-APO-baja:NOT|2:T-VD-APO-adecuada|2:T-VD-EXP-buena,T-RIESGO-bajo,G-14;Q26,G-14

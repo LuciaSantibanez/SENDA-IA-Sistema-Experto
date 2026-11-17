@@ -1,0 +1,24 @@
+id,estado_pg2,cambio_pg2,evidencia
+ADM-02,MODIFICADA,Catálogo general de derivación validado con la lista de la experta; anemia perniciosa pasa a la categoría general «anemia conocida»,Q4
+ADM-03,MODIFICADA,Solo corta huecos groseros (día atípico único / «como de todo» / comida aislada); con menos de 3 días el caso es admisible con calidad BAJA (ADM-F) y G-06 bloquea lo cuantitativo,Q1;Q3
+ADM-04,CONFIRMADA,Se pregunta antes de reclasificar,Q7
+ADM-06,MODIFICADA,Implementada por el modelo difuso MD-ADM (ADM-F01 a ADM-F06) más topes crisp,Q1;Q2;Q3
+G-03,CONFIRMADA,«Cuando me acuerdo» no permite asumir cobertura,Q28
+G-07,MODIFICADA,PARAM_UMBRAL(n)=70 % de la referencia (CANDIDATO); en FE / B12 / VD la alerta cuantitativa pasa a la capa difusa,Q8;Q9
+G-11,CONFIRMADA,Sin umbral de meses: advertencia provisional,Q29
+G-12,CONFIRMADA,La condición específica no bloquea los otros nutrientes,Q5
+CA-04,CONFIRMADA,No se asigna valor genérico a productos de composición variable,Q14
+FE-02,MODIFICADA,Margen temporal del inhibidor 1–2 h como PARAM_MARGEN_INHIBIDOR (CANDIDATO),Q17
+FE-08,CONFIRMADA,No hay plazo único para la donación,Q20
+FE-09,MODIFICADA,Ya no verifica la fuente: solo marca biodisponibilidad FAVORABLE y agrega advertencia de revisión,Q19
+B12-07,MODIFICADA,Rama oral reemplazada por adherencia_suplemento_b12 (B12-FZ); rama inyectable sin cambios,Q28
+B12-12,CONFIRMADA,El riesgo de menor absorción aumenta con la edad (sobre todo > 50),Q23
+B12-20,SUSPENDIDA,La frecuencia sin porciones no permite concluir; se convierte en pedido de cantidades,Q21
+VD-11,MODIFICADA,Clasificación de exposición = etiqueta dominante del índice exposicion_uvb_efectiva,Q24;Q25;Q27
+VD-21,MODIFICADA,Idem VD-11 (etiqueta «buena» → ADECUADA),Q24
+VD-13,REEMPLAZADA,Reemplazada por VD-FZ-01 + VD-FZ-05,Q8;Q9
+VD-14,REEMPLAZADA,Reemplazada por VD-FZ-02: con dieta baja el sol no lleva a SIN_SEÑAL,Q26
+VD-25,MODIFICADA,Componente limitante tomado de la regla difusa con mayor α,—
+VD-27,REEMPLAZADA,Reemplazada por VD-FZ-06 (proyección invernal),Q25
+META-01,CANDIDATA,Precedencia POSIBLE > INFORMACION marcada como política a validar,Q11
+META-07,MODIFICADA,Se extiende a los parámetros difusos y a la política de la zona moderada,—

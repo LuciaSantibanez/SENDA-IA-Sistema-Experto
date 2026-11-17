@@ -1,0 +1,3 @@
+paciente,suplemento,tipo,contiene,pauta_28d,realizadas_28d,regularidad,momento_toma
+P03,supl_calcio_d,CALCIO_D,CA:600mg;VD:10µg,28,28,REGULAR,CON_COMIDAS
+P04,supl_b12_simple,SIMPLE,B12:250µg,28,DESCONOCIDO,IRREGULAR,DESCONOCIDO

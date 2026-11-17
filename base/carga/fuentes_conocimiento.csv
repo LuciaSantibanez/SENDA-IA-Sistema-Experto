@@ -1,0 +1,19 @@
+id,nombre,tipo,aporta
+NIH_ODS,NIH Office of Dietary Supplements – fichas de hierro; calcio; B12 y vitamina D,Documento,Valores de referencia; límites superiores; interacciones
+IOM,Institute of Medicine (1998; 2011) – Dietary Reference Intakes,Documento,Base de las referencias de B12; calcio y vitamina D
+CAA,Código Alimentario Argentino (Cap. XVII) y Res. Conjuntas 33/2025 y 38/2025,Normativa,Fortificación y rotulado
+LEY_25630,Ley 25.630,Normativa,Fortificación de harinas con hierro (no B12)
+GUIAS_AR,Guías Alimentarias para la Población Argentina (2016),Documento,Porciones de referencia local
+NCI_24H,National Cancer Institute – 24-hour Dietary Recall,Documento,Variación entre días del registro
+WATANABE,Watanabe et al. (2014),Artículo,Análogos inactivos de B12 en algas y espirulina
+WEBB_HOLICK,Webb; Kline y Holick (1988); Holick (2007); Webb y Engelsen (2006),Artículo,Estación; latitud; piel y síntesis cutánea
+MELINA,Melina; Craig y Levin (2016),Artículo,Dietas vegetarianas: B12; hierro; calcio y vitamina D
+TABLAS,USDA FoodData Central / ARGENFOODS,Base de datos,Contenido de nutrientes por porción
+OSTERBERG,Osterberg y Blaschke (2005),Artículo,Convención de 80 % de adherencia
+CUESTIONARIO,Cuestionario para la nutricionista – SENDA (15/10/2026),Experto,Validación de criterios; umbrales y catálogo
+PG1,Grupo 6 – PG1 Integración conceptual,Documento del proyecto,Red; frames y 66 reglas consolidadas
+PI3_ZALAZAR,Zalazar – PI3 Admisibilidad,Documento del proyecto,Modelo difuso de calidad del registro
+PI3_RAMIREZ,Ramirez – PI3 Calcio,Documento del proyecto,Modelo difuso de prioridad de revisión de calcio
+PI3_SANTIBANEZ,Santibañez – PI3 Hierro,Documento del proyecto,Modelo difuso de riesgo de hierro
+PI3_NUNEZ,Nuñez – PI3 Vitamina B12,Documento del proyecto,Modelo difuso de riesgo de B12
+PI3_BATALLER,Bataller – PI3 Vitamina D,Documento del proyecto,Modelo difuso de riesgo de vitamina D e índice UVB
