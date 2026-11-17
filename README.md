@@ -1,6 +1,6 @@
 # SENDA — Sistema Experto de Evaluación Nutricional
 
-**Proyecto académico de Inteligencia Artificial · Grupo 6**
+**Proyecto académico de Inteligencia Artificial**
 
 SENDA integra una **base de conocimiento en Neo4j**, **reglas de inferencia**, **lógica difusa** y un **modelo de lenguaje local (LLM) mediante Ollama** para consultar y explicar evaluaciones nutricionales registradas. Su objetivo es ofrecer respuestas trazables a partir de evidencia presente en el grafo, sin convertir la salida del modelo de lenguaje en una decisión clínica.
 
